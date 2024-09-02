@@ -12,7 +12,7 @@ namespace WarehouseAndSales
 {
     public partial class MatSelector : Form
     {
-        public static bool FromAddingMatToWarehouse = false;
+        public static string From  = "";
         public static int WarehouseID = 0;
         public static int MatID = 0;
         public static string Action = "";
@@ -28,7 +28,9 @@ namespace WarehouseAndSales
         private void matsDG_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             MatID = Convert.ToInt32(matsDG.Rows[e.RowIndex].Cells["ID"].Value.ToString());
-            if (FromAddingMatToWarehouse) {
+            if (From.Equals("Deposit") || From.Equals("Withdroaw"))
+            {
+
 
                 MatToWarehouseAction.WarehouseID= WarehouseID;
                 MatToWarehouseAction.MatID= MatID;

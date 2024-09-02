@@ -29,12 +29,45 @@ namespace WarehouseAndSales
 
         private void button1_Click(object sender, EventArgs e)
         {
-            MatSelector.FromAddingMatToWarehouse = true;
+            MatSelector.From = "Deposit";
             MatSelector.WarehouseID = WarehouseID;
             MatSelector.Action = "ايداع";
             MatSelector matsSelector = new MatSelector();
             matsSelector.Show();
             this.Close();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+           
+
+        }
+
+        private void warehousesMatsDG_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (warehousesMatsDG.Rows[e.RowIndex].Cells[e.ColumnIndex] is DataGridViewButtonCell)
+            {
+
+                DataGridViewButtonCell btn = (DataGridViewButtonCell)warehousesMatsDG.Rows[e.RowIndex].Cells[e.ColumnIndex];
+                if (btn.Value.Equals("سحب"))
+
+
+
+
+                    MatID = Convert.ToInt32(warehousesMatsDG.Rows[e.RowIndex].Cells["MatID"].Value.ToString());
+                MatToWarehouseAction.WarehouseID = WarehouseID;
+                MatToWarehouseAction.MatID = MatID;
+                MatToWarehouseAction.Action = "سحب";
+                MatToWarehouseAction matToWarehouseAction = new MatToWarehouseAction();
+                matToWarehouseAction.Show();
+                this.Close();
+
+
+
+
+            }
+           //MessageBox.Show(warehousesMatsDG.Rows[e.RowIndex].Cells[e.ColumnIndex] .GetType()+ "");
+
         }
     }
 }

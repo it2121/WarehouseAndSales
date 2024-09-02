@@ -27,13 +27,15 @@ namespace WarehouseAndSales
 
         private void button1_Click(object sender, EventArgs e)
         {
+
+            if (Action.Equals("سحب") || Action.Equals("ايداع")) { 
             BAL.InsertIntoMatToWarehouses(MatID, WarehouseID, Convert.ToInt32(Quant.Text), MovingDate.Text, Notes.Text, Action);
 
 
             WarehouseMats.WarehouseID = WarehouseID;
             WarehouseMats warehouseMats = new WarehouseMats();
             warehouseMats.Show();
-            this.Close();
+            this.Close(); }
 
         }
     }
