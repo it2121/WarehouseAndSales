@@ -54,6 +54,7 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Helper.cs" />
     <Compile Include="Home.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -80,6 +81,18 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Sales.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sales.Designer.cs">
+      <DependentUpon>Sales.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SalesEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SalesEditor.Designer.cs">
+      <DependentUpon>SalesEditor.cs</DependentUpon>
+    </Compile>
     <Compile Include="WarehouseMats.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -91,6 +104,12 @@
     </Compile>
     <Compile Include="Warehouses.Designer.cs">
       <DependentUpon>Warehouses.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WarehouseSelector.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WarehouseSelector.Designer.cs">
+      <DependentUpon>WarehouseSelector.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
@@ -116,11 +135,20 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Sales.resx">
+      <DependentUpon>Sales.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SalesEditor.resx">
+      <DependentUpon>SalesEditor.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="WarehouseMats.resx">
       <DependentUpon>WarehouseMats.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Warehouses.resx">
       <DependentUpon>Warehouses.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WarehouseSelector.resx">
+      <DependentUpon>WarehouseSelector.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

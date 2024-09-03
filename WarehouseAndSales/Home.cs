@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -28,6 +29,13 @@ namespace WarehouseAndSales
         {
             Mats mats = new Mats();
             mats.Show();
+            this.Close();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Sales sales = new Sales();
+            sales.Show();
             this.Close();
         }
     }

@@ -10,7 +10,57 @@ namespace WarehouseAndSales
 {
     internal class BAL
     {
-        public static DataTable GetMatsOfAWarehouse(int WarehouseID)
+        public static DataTable GetAllItemsWithInStock()
+        {
+            SqlCommand cm;
+            cm = DAL.CreateCommand();
+
+            cm.CommandText = "GetAllItemsWithInStock";
+            SqlConnection.ClearAllPools();
+            return DAL.ExecuteSelectCommand(cm);
+        }    public static DataTable GetAllInStockOfAMat(int MatID)
+        {
+            SqlCommand cm;
+            cm = DAL.CreateCommand();
+
+            cm.CommandText = "GetAllInStockOfAMat";
+            cm.Parameters.AddWithValue("@MatID", MatID);
+            SqlConnection.ClearAllPools();
+            return DAL.ExecuteSelectCommand(cm);
+        }    public static DataTable GetMatByID(int MatID)
+        {
+            SqlCommand cm;
+            cm = DAL.CreateCommand();
+
+            cm.CommandText = "GetMatByID";
+            cm.Parameters.AddWithValue("@MatID", MatID);
+            SqlConnection.ClearAllPools();
+            return DAL.ExecuteSelectCommand(cm);
+        }     public static DataTable GetWarehouseName(int WarehouseID)
+        {
+            SqlCommand cm;
+            cm = DAL.CreateCommand();
+
+            cm.CommandText = "GetWarehouseName";
+            cm.Parameters.AddWithValue("@WarehouseID", WarehouseID);
+            SqlConnection.ClearAllPools();
+            return DAL.ExecuteSelectCommand(cm);
+        }  
+        
+        
+        public static DataTable GetAllRemMatsOfAWarehouse(int WarehouseID)
+        {
+            SqlCommand cm;
+            cm = DAL.CreateCommand();
+
+            cm.CommandText = "GetAllRemMatsOfAWarehouse";
+            cm.Parameters.AddWithValue("@WarehouseID", WarehouseID);
+            SqlConnection.ClearAllPools();
+            return DAL.ExecuteSelectCommand(cm);
+        }  
+      
+
+public static DataTable GetMatsOfAWarehouse(int WarehouseID)
         {
             SqlCommand cm;
             cm = DAL.CreateCommand();
@@ -20,6 +70,9 @@ namespace WarehouseAndSales
             SqlConnection.ClearAllPools();
             return DAL.ExecuteSelectCommand(cm);
         }
+
+
+
            public static DataTable LogIn(string username, string password)
         {
             SqlCommand cm;
@@ -33,7 +86,17 @@ namespace WarehouseAndSales
         }
 
 
-        public static DataTable GetAllMats()
+        public static DataTable GetAllSales()
+        {
+            SqlCommand cm;
+            cm = DAL.CreateCommand();
+
+            cm.CommandText = "GetAllSales";
+
+
+            SqlConnection.ClearAllPools();
+            return DAL.ExecuteSelectCommand(cm);
+        }   public static DataTable GetAllMats()
         {
             SqlCommand cm;
             cm = DAL.CreateCommand();
@@ -43,7 +106,11 @@ namespace WarehouseAndSales
 
             SqlConnection.ClearAllPools();
             return DAL.ExecuteSelectCommand(cm);
-        }  public static DataTable GetAllWarehouses()
+        } 
+        
+        
+        
+        public static DataTable GetAllWarehouses()
         {
             SqlCommand cm;
             cm = DAL.CreateCommand();

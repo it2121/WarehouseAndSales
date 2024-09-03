@@ -69,5 +69,24 @@ namespace WarehouseAndSales
            //MessageBox.Show(warehousesMatsDG.Rows[e.RowIndex].Cells[e.ColumnIndex] .GetType()+ "");
 
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+
+
+
+            WarehouseSelector.From = "WithdrawFromAnotherWarehosue";
+            WarehouseSelector.toWarehouseID = WarehouseID;
+            WarehouseSelector.Action = "سحب من مخزن اخر";
+            WarehouseSelector warehouseSelector = new WarehouseSelector();
+            warehouseSelector.Show();
+            this.Close();
+
+
+
+
+
+
+        }
     }
 }
