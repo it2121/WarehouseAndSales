@@ -18,7 +18,34 @@ namespace WarehouseAndSales
             cm.CommandText = "GetAllItemsWithInStock";
             SqlConnection.ClearAllPools();
             return DAL.ExecuteSelectCommand(cm);
-        }    public static DataTable GetAllInStockOfAMat(int MatID)
+        }    public static DataTable GetSalesRecordByID(int ID)
+        {
+            SqlCommand cm;
+            cm = DAL.CreateCommand();
+
+            cm.CommandText = "GetSalesRecordByID";
+            cm.Parameters.AddWithValue("@ID", ID);
+            SqlConnection.ClearAllPools();
+            return DAL.ExecuteSelectCommand(cm);
+        }     public static DataTable GetAllMatToWarehouseRecordByID(int ID)
+        {
+            SqlCommand cm;
+            cm = DAL.CreateCommand();
+
+            cm.CommandText = "GetAllMatToWarehouseRecordByID";
+            cm.Parameters.AddWithValue("@ID", ID);
+            SqlConnection.ClearAllPools();
+            return DAL.ExecuteSelectCommand(cm);
+        }   public static DataTable GetAllMatToWarehouseRecords(int WarehouseID)
+        {
+            SqlCommand cm;
+            cm = DAL.CreateCommand();
+
+            cm.CommandText = "GetAllMatToWarehouseRecords";
+            cm.Parameters.AddWithValue("@WarehouseID", WarehouseID);
+            SqlConnection.ClearAllPools();
+            return DAL.ExecuteSelectCommand(cm);
+        }   public static DataTable GetAllInStockOfAMat(int MatID)
         {
             SqlCommand cm;
             cm = DAL.CreateCommand();
@@ -124,6 +151,68 @@ public static DataTable GetMatsOfAWarehouse(int WarehouseID)
 
 
 
+        public static bool UpdateSales(int MatID, int WarehouseID, int Quant, string SaleDate,int TotalPrice,string TypeOfSale ,
+            string BuyingParty,
+            string Notes,int ID)
+        {
+
+
+
+            SqlCommand cm;
+            cm = DAL.CreateCommand();
+            if (cm == null) { return false; }
+            cm.CommandText = "UpdateSales";
+
+            cm.Parameters.AddWithValue("@MatID", MatID);
+            cm.Parameters.AddWithValue("@WarehouseID", WarehouseID);
+            cm.Parameters.AddWithValue("@Quant", Quant);
+            cm.Parameters.AddWithValue("@SaleDate", SaleDate);
+            cm.Parameters.AddWithValue("@TotalPrice", TotalPrice);
+            cm.Parameters.AddWithValue("@TypeOfSale", TypeOfSale);
+            cm.Parameters.AddWithValue("@BuyingParty", BuyingParty);
+            cm.Parameters.AddWithValue("@Notes", Notes);
+            cm.Parameters.AddWithValue("@ID", ID);
+
+
+
+
+
+            SqlConnection.ClearAllPools();
+            return DAL.ExecuteCommand(cm);
+
+
+
+        }     public static bool InsertIntoSales(int MatID, int WarehouseID, int Quant, string SaleDate,int TotalPrice,string TypeOfSale ,
+            string BuyingParty,
+            string Notes)
+        {
+
+
+
+            SqlCommand cm;
+            cm = DAL.CreateCommand();
+            if (cm == null) { return false; }
+            cm.CommandText = "InsertIntoSales";
+
+            cm.Parameters.AddWithValue("@MatID", MatID);
+            cm.Parameters.AddWithValue("@WarehouseID", WarehouseID);
+            cm.Parameters.AddWithValue("@Quant", Quant);
+            cm.Parameters.AddWithValue("@SaleDate", SaleDate);
+            cm.Parameters.AddWithValue("@TotalPrice", TotalPrice);
+            cm.Parameters.AddWithValue("@TypeOfSale", TypeOfSale);
+            cm.Parameters.AddWithValue("@BuyingParty", BuyingParty);
+            cm.Parameters.AddWithValue("@Notes", Notes);
+
+
+
+
+
+            SqlConnection.ClearAllPools();
+            return DAL.ExecuteCommand(cm);
+
+
+
+        }   
         public static bool InsertIntoMatToWarehouses(int MatID, int WarehouseID, int Quant, string MovingDate, string Notes, string MovingAction)
         {
             SqlCommand cm;

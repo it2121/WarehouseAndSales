@@ -45,6 +45,8 @@
             this.label6 = new System.Windows.Forms.Label();
             this.TotalPrice = new System.Windows.Forms.TextBox();
             this.button2 = new System.Windows.Forms.Button();
+            this.label7 = new System.Windows.Forms.Label();
+            this.MaxQuantInStock = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // MatName
@@ -81,9 +83,9 @@
             // Quant
             // 
             this.Quant.Font = new System.Drawing.Font("Lotus Linotype", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Quant.Location = new System.Drawing.Point(258, 102);
+            this.Quant.Location = new System.Drawing.Point(9, 102);
             this.Quant.Name = "Quant";
-            this.Quant.Size = new System.Drawing.Size(320, 43);
+            this.Quant.Size = new System.Drawing.Size(569, 43);
             this.Quant.TabIndex = 7;
             this.Quant.TextChanged += new System.EventHandler(this.Quant_TextChanged);
             // 
@@ -101,7 +103,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Lotus Linotype", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(144, 102);
+            this.label2.Location = new System.Drawing.Point(583, 168);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(87, 37);
             this.label2.TabIndex = 10;
@@ -111,7 +113,7 @@
             // 
             this.Retail.AutoSize = true;
             this.Retail.Font = new System.Drawing.Font("Lotus Linotype", 14.25F);
-            this.Retail.Location = new System.Drawing.Point(76, 102);
+            this.Retail.Location = new System.Drawing.Point(515, 168);
             this.Retail.Name = "Retail";
             this.Retail.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.Retail.Size = new System.Drawing.Size(62, 41);
@@ -124,7 +126,7 @@
             // 
             this.Wholesale.AutoSize = true;
             this.Wholesale.Font = new System.Drawing.Font("Lotus Linotype", 14.25F);
-            this.Wholesale.Location = new System.Drawing.Point(12, 103);
+            this.Wholesale.Location = new System.Drawing.Point(451, 169);
             this.Wholesale.Name = "Wholesale";
             this.Wholesale.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.Wholesale.Size = new System.Drawing.Size(58, 41);
@@ -137,7 +139,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Lotus Linotype", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(584, 166);
+            this.label3.Location = new System.Drawing.Point(586, 242);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(80, 37);
             this.label3.TabIndex = 14;
@@ -146,7 +148,7 @@
             // BuyingParty
             // 
             this.BuyingParty.Font = new System.Drawing.Font("Lotus Linotype", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BuyingParty.Location = new System.Drawing.Point(7, 163);
+            this.BuyingParty.Location = new System.Drawing.Point(9, 239);
             this.BuyingParty.Name = "BuyingParty";
             this.BuyingParty.Size = new System.Drawing.Size(571, 43);
             this.BuyingParty.TabIndex = 13;
@@ -155,7 +157,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Lotus Linotype", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(586, 304);
+            this.label4.Location = new System.Drawing.Point(588, 380);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(78, 37);
             this.label4.TabIndex = 16;
@@ -164,7 +166,7 @@
             // Notes
             // 
             this.Notes.Font = new System.Drawing.Font("Lotus Linotype", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Notes.Location = new System.Drawing.Point(7, 301);
+            this.Notes.Location = new System.Drawing.Point(9, 377);
             this.Notes.Name = "Notes";
             this.Notes.Size = new System.Drawing.Size(571, 43);
             this.Notes.TabIndex = 15;
@@ -173,7 +175,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Lotus Linotype", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(607, 235);
+            this.label5.Location = new System.Drawing.Point(609, 311);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(57, 37);
             this.label5.TabIndex = 18;
@@ -182,7 +184,7 @@
             // SaleDate
             // 
             this.SaleDate.Font = new System.Drawing.Font("Lotus Linotype", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SaleDate.Location = new System.Drawing.Point(7, 232);
+            this.SaleDate.Location = new System.Drawing.Point(9, 308);
             this.SaleDate.Name = "SaleDate";
             this.SaleDate.Size = new System.Drawing.Size(571, 43);
             this.SaleDate.TabIndex = 17;
@@ -191,7 +193,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Lotus Linotype", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(582, 391);
+            this.label6.Location = new System.Drawing.Point(584, 467);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(86, 37);
             this.label6.TabIndex = 20;
@@ -200,7 +202,7 @@
             // TotalPrice
             // 
             this.TotalPrice.Font = new System.Drawing.Font("Lotus Linotype", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TotalPrice.Location = new System.Drawing.Point(9, 388);
+            this.TotalPrice.Location = new System.Drawing.Point(11, 464);
             this.TotalPrice.Name = "TotalPrice";
             this.TotalPrice.Size = new System.Drawing.Size(571, 43);
             this.TotalPrice.TabIndex = 19;
@@ -208,7 +210,7 @@
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("Lotus Linotype", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(151, 481);
+            this.button2.Location = new System.Drawing.Point(153, 557);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(388, 43);
             this.button2.TabIndex = 21;
@@ -216,11 +218,34 @@
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Lotus Linotype", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(251, 171);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(156, 37);
+            this.label7.TabIndex = 22;
+            this.label7.Text = "الكمية المتوفرة في المخازن";
+            // 
+            // MaxQuantInStock
+            // 
+            this.MaxQuantInStock.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.MaxQuantInStock.Font = new System.Drawing.Font("Lotus Linotype", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MaxQuantInStock.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.MaxQuantInStock.Location = new System.Drawing.Point(9, 171);
+            this.MaxQuantInStock.Name = "MaxQuantInStock";
+            this.MaxQuantInStock.ReadOnly = true;
+            this.MaxQuantInStock.Size = new System.Drawing.Size(236, 43);
+            this.MaxQuantInStock.TabIndex = 23;
+            // 
             // SalesEditor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(678, 568);
+            this.ClientSize = new System.Drawing.Size(678, 623);
+            this.Controls.Add(this.MaxQuantInStock);
+            this.Controls.Add(this.label7);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.TotalPrice);
@@ -265,5 +290,7 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox TotalPrice;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox MaxQuantInStock;
     }
 }

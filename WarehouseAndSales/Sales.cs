@@ -29,5 +29,30 @@ namespace WarehouseAndSales
             this.Close();
 
         }
+
+        private void SalesDG_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (SalesDG.Rows[e.RowIndex].Cells[e.ColumnIndex] is DataGridViewButtonCell)
+            {
+
+                DataGridViewButtonCell btn = (DataGridViewButtonCell)SalesDG.Rows[e.RowIndex].Cells[e.ColumnIndex];
+                if (btn.Value.Equals("تعديل"))
+                {
+
+
+
+                    int ID = Convert.ToInt32(SalesDG.Rows[e.RowIndex].Cells["ID"].Value.ToString());
+                    SalesEditor.ID = ID;
+                    SalesEditor.Edit = true;
+                    SalesEditor salesEditor = new SalesEditor();
+                    salesEditor.Show();
+                    this.Close();
+
+
+                }
+
+
+            }
+        }
     }
 }

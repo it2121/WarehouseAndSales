@@ -50,11 +50,11 @@ namespace WarehouseAndSales
 
                 DataGridViewButtonCell btn = (DataGridViewButtonCell)warehousesMatsDG.Rows[e.RowIndex].Cells[e.ColumnIndex];
                 if (btn.Value.Equals("سحب"))
+                { 
 
 
 
-
-                    MatID = Convert.ToInt32(warehousesMatsDG.Rows[e.RowIndex].Cells["MatID"].Value.ToString());
+                MatID = Convert.ToInt32(warehousesMatsDG.Rows[e.RowIndex].Cells["MatID"].Value.ToString());
                 MatToWarehouseAction.WarehouseID = WarehouseID;
                 MatToWarehouseAction.MatID = MatID;
                 MatToWarehouseAction.Action = "سحب";
@@ -63,10 +63,11 @@ namespace WarehouseAndSales
                 this.Close();
 
 
-
+                }
+           
 
             }
-           //MessageBox.Show(warehousesMatsDG.Rows[e.RowIndex].Cells[e.ColumnIndex] .GetType()+ "");
+            //MessageBox.Show(warehousesMatsDG.Rows[e.RowIndex].Cells[e.ColumnIndex] .GetType()+ "");
 
         }
 
@@ -87,6 +88,14 @@ namespace WarehouseAndSales
 
 
 
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            WarehouseRecords.WarehouseID = WarehouseID;
+            WarehouseRecords warehouseRecords  = new WarehouseRecords();
+            warehouseRecords.Show();
+            this.Close();
         }
     }
 }

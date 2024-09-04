@@ -99,6 +99,12 @@
     <Compile Include="WarehouseMats.Designer.cs">
       <DependentUpon>WarehouseMats.cs</DependentUpon>
     </Compile>
+    <Compile Include="WarehouseRecords.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WarehouseRecords.Designer.cs">
+      <DependentUpon>WarehouseRecords.cs</DependentUpon>
+    </Compile>
     <Compile Include="Warehouses.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -143,6 +149,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="WarehouseMats.resx">
       <DependentUpon>WarehouseMats.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WarehouseRecords.resx">
+      <DependentUpon>WarehouseRecords.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Warehouses.resx">
       <DependentUpon>Warehouses.cs</DependentUpon>

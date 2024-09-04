@@ -1,6 +1,6 @@
 ﻿namespace WarehouseAndSales
 {
-    partial class Sales
+    partial class WarehouseRecords
     {
         /// <summary>
         /// Required designer variable.
@@ -38,10 +38,10 @@
             this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
-            this.SalesDG = new System.Windows.Forms.DataGridView();
+            this.warehousesRecordsDG = new System.Windows.Forms.DataGridView();
             this.Edit = new System.Windows.Forms.DataGridViewButtonColumn();
             this.flowLayoutPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.SalesDG)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.warehousesRecordsDG)).BeginInit();
             this.SuspendLayout();
             // 
             // flowLayoutPanel1
@@ -54,7 +54,7 @@
             this.flowLayoutPanel1.Controls.Add(this.button4);
             this.flowLayoutPanel1.Controls.Add(this.button5);
             this.flowLayoutPanel1.Controls.Add(this.button6);
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(12, 12);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(13, 12);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(954, 49);
             this.flowLayoutPanel1.TabIndex = 3;
@@ -65,9 +65,8 @@
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(149, 40);
             this.button1.TabIndex = 0;
-            this.button1.Text = "اضافة قيد بيع جديد";
+            this.button1.Text = "00";
             this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button3
             // 
@@ -75,7 +74,7 @@
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(149, 40);
             this.button3.TabIndex = 2;
-            this.button3.Text = "--";
+            this.button3.Text = "00";
             this.button3.UseVisualStyleBackColor = true;
             // 
             // button4
@@ -84,7 +83,7 @@
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(149, 40);
             this.button4.TabIndex = 3;
-            this.button4.Text = "button4";
+            this.button4.Text = "0";
             this.button4.UseVisualStyleBackColor = true;
             // 
             // button5
@@ -105,13 +104,13 @@
             this.button6.Text = "button6";
             this.button6.UseVisualStyleBackColor = true;
             // 
-            // SalesDG
+            // warehousesRecordsDG
             // 
-            this.SalesDG.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.warehousesRecordsDG.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.SalesDG.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.SalesDG.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.SalesDG.BackgroundColor = System.Drawing.Color.White;
+            this.warehousesRecordsDG.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.warehousesRecordsDG.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.warehousesRecordsDG.BackgroundColor = System.Drawing.Color.White;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Lotus Linotype", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -119,9 +118,9 @@
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.SalesDG.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.SalesDG.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.SalesDG.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.warehousesRecordsDG.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.warehousesRecordsDG.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.warehousesRecordsDG.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Edit});
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
@@ -130,10 +129,10 @@
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.SalesDG.DefaultCellStyle = dataGridViewCellStyle3;
-            this.SalesDG.Location = new System.Drawing.Point(15, 71);
-            this.SalesDG.Name = "SalesDG";
-            this.SalesDG.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.warehousesRecordsDG.DefaultCellStyle = dataGridViewCellStyle3;
+            this.warehousesRecordsDG.Location = new System.Drawing.Point(16, 71);
+            this.warehousesRecordsDG.Name = "warehousesRecordsDG";
+            this.warehousesRecordsDG.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle4.Font = new System.Drawing.Font("Lotus Linotype", 15.75F);
@@ -141,15 +140,15 @@
             dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.SalesDG.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
-            this.SalesDG.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Lotus Linotype", 15.75F);
-            this.SalesDG.RowTemplate.DividerHeight = 2;
-            this.SalesDG.RowTemplate.Height = 44;
-            this.SalesDG.RowTemplate.ReadOnly = true;
-            this.SalesDG.ShowEditingIcon = false;
-            this.SalesDG.Size = new System.Drawing.Size(951, 579);
-            this.SalesDG.TabIndex = 4;
-            this.SalesDG.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.SalesDG_CellContentClick);
+            this.warehousesRecordsDG.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            this.warehousesRecordsDG.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Lotus Linotype", 15.75F);
+            this.warehousesRecordsDG.RowTemplate.DividerHeight = 2;
+            this.warehousesRecordsDG.RowTemplate.Height = 44;
+            this.warehousesRecordsDG.RowTemplate.ReadOnly = true;
+            this.warehousesRecordsDG.ShowEditingIcon = false;
+            this.warehousesRecordsDG.Size = new System.Drawing.Size(951, 579);
+            this.warehousesRecordsDG.TabIndex = 4;
+            this.warehousesRecordsDG.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.warehousesMatsDG_CellContentClick);
             // 
             // Edit
             // 
@@ -169,19 +168,19 @@
             this.Edit.ToolTipText = "تعديل";
             this.Edit.UseColumnTextForButtonValue = true;
             // 
-            // Sales
+            // WarehouseRecords
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(979, 662);
-            this.Controls.Add(this.SalesDG);
+            this.Controls.Add(this.warehousesRecordsDG);
             this.Controls.Add(this.flowLayoutPanel1);
             this.MinimumSize = new System.Drawing.Size(995, 701);
-            this.Name = "Sales";
-            this.Text = "Sales";
+            this.Name = "WarehouseRecords";
+            this.Text = "WarehouseRecords";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.flowLayoutPanel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.SalesDG)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.warehousesRecordsDG)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -194,7 +193,7 @@
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.DataGridView SalesDG;
+        private System.Windows.Forms.DataGridView warehousesRecordsDG;
         private System.Windows.Forms.DataGridViewButtonColumn Edit;
     }
 }
