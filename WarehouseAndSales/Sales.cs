@@ -23,10 +23,11 @@ namespace WarehouseAndSales
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            SalesEditor.MatID = 0;
+            SalesEditor.Edit = false;
             SalesEditor salesEditor = new SalesEditor();
             salesEditor.Show();
-            this.Close();
+            this.Hide();
 
         }
 
@@ -46,13 +47,27 @@ namespace WarehouseAndSales
                     SalesEditor.Edit = true;
                     SalesEditor salesEditor = new SalesEditor();
                     salesEditor.Show();
-                    this.Close();
+                    this.Hide();
 
 
                 }
 
 
             }
+        }
+
+        private void Return_Click(object sender, EventArgs e)
+        {
+            Home home = new Home();
+            home.Show();
+            this.Hide();
+        }
+        protected override void OnFormClosing(FormClosingEventArgs e)
+        {
+
+            Home home = new Home();
+            home.Show();
+            this.Hide();
         }
     }
 }

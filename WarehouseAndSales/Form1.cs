@@ -21,7 +21,11 @@ namespace WarehouseAndSales
         {
 
         }
+        protected override void OnFormClosing(FormClosingEventArgs e)
+        {
 
+            Application.Exit();
+        }
         private void Form1_Load(object sender, EventArgs e)
         {
 
@@ -37,7 +41,6 @@ namespace WarehouseAndSales
                 Home home = new Home();
                 home.Show();
                 this.Hide();
-
             }
             else
             {

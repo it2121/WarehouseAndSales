@@ -17,8 +17,10 @@ namespace WarehouseAndSales
         public static int WholeSalePrice = 0;
         public static int MaxQuant = 0;
         public static int ID = 0;
+        public int WarehouseID = 0;
+        public int CustomerID = 0;
         public static bool Edit = false;
-
+        
         public SalesEditor()
         {
             InitializeComponent();
@@ -35,7 +37,6 @@ namespace WarehouseAndSales
 
 
                 }
-
 
 
             }
@@ -81,7 +82,19 @@ namespace WarehouseAndSales
 
             }
 
+            if (Edit)
+            {
+                DelBtn.Visible = true;
 
+                WithdrawGroup.Visible = false;
+
+            }
+            else {
+                DelBtn.Visible = false;
+                WithdrawGroup.Visible = true;
+
+            }
+                            AutoWithdraw.Checked = true;
 
         }
 
@@ -89,7 +102,12 @@ namespace WarehouseAndSales
         {
 
         }
+        public void setCustomerName() {
+            BuyingParty.Text = BAL.GetProviderOrCustomerByID(CustomerID).Rows[0]["FullName"].ToString();
 
+
+
+        }
         private void SalesEditor_Load(object sender, EventArgs e)
         {
 
@@ -101,7 +119,7 @@ namespace WarehouseAndSales
             MatSelector matSelector = new MatSelector();
 
             matSelector.Show();
-            this.Close();
+            this.Hide();
         }
         public void EffectChanges()
         {
@@ -115,12 +133,14 @@ namespace WarehouseAndSales
                 MaxQuant += Convert.ToInt32(Row["InStock"].ToString());
 
             }
-            MaxQuantInStock.Text = MaxQuant+"";
+            MaxQuantInStock.Text = MaxQuant + "";
 
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
+
+            
             string TypeOfSale = "جملة";
             if (Retail.Checked == true)
             {
@@ -140,12 +160,24 @@ namespace WarehouseAndSales
 
 
                     BAL.InsertIntoSales(MatID, 0, Convert.ToInt32(Quant.Text), SaleDate.Text, Convert.ToInt32(TotalPrice.Text), TypeOfSale,
-                 BuyingParty.Text,
                  Notes.Text
-
+                 ,CustomerID
                         );
 
+                    if (AutoWithdraw.Checked) {
 
+                        WarehouseSelector.From = "AutoSalesWithdraw";
+                        WarehouseSelector.MatID = MatID;
+                        WarehouseSelector.SailsForm = this;
+                        WarehouseSelector warehouseSelector = new WarehouseSelector();
+                        warehouseSelector.Show();
+                        this.Hide();
+
+
+
+
+
+                    }
 
                 }
                 else
@@ -153,8 +185,7 @@ namespace WarehouseAndSales
 
 
                     BAL.UpdateSales(MatID, 0, Convert.ToInt32(Quant.Text), SaleDate.Text, Convert.ToInt32(TotalPrice.Text), TypeOfSale,
-                 BuyingParty.Text,
-                 Notes.Text, ID
+                 Notes.Text, ID, CustomerID
 
                         );
 
@@ -162,19 +193,46 @@ namespace WarehouseAndSales
 
 
                 }
+                if (!AutoWithdraw.Checked)
+                {
 
-                Sales sales = new Sales();
-                sales.Show();
-                this.Close();
+                    Sales sales = new Sales();
+                    sales.Show();
+                    this.Hide();
+                }
             }
             else {
 
 
                 MessageBox.Show("يجب ان تكون الكمية المحددة اقل من الكمية المتوفرة في المخازن!");
-            
-            
+
+
             }
 
+        }
+
+        public void AutoWithdrawNow (){
+
+            int RemInStock = Convert.ToInt32(BAL.GetOneRemMatsOfAWarehouseByMatID(Global.getWarehousID(), MatID).Rows[0]["InStock"].ToString());
+            if (RemInStock > Convert.ToInt32(Quant.Text)) {
+
+                BAL.InsertIntoMatToWarehouses(MatID, Global.getWarehousID(), Convert.ToInt32(Quant.Text), SaleDate.Text,
+                            " :سحبت تلقائياً لقيد البيع ذو الرقم" + BAL.GetLastSailID().Rows[0][0].ToString()
+                            , "سحب");
+
+
+                MessageBox.Show("تم سحب الكمية من المخزن بنجاح");
+                Sales sales = new Sales();
+                sales.Show();
+                this.Hide();
+
+
+            }
+            else {
+
+                MessageBox.Show("تعذر السحب من المخزف لعدم احتواء المخزن المحدد على الكمية المطلوبة يرجى سحب الكميات من المخازن بشكل يدوي");
+
+            }
         }
         public void EffectChangesToTotalCost()
         {
@@ -211,6 +269,127 @@ namespace WarehouseAndSales
         private void Quant_TextChanged(object sender, EventArgs e)
         {
             EffectChangesToTotalCost();
+
+        }
+
+
+        protected override void OnFormClosing(FormClosingEventArgs e)
+        {
+
+            Sales sales = new Sales();
+            sales.Show();
+            this.Hide();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+
+            BAL.DeleteSales( ID
+
+                );
+
+
+
+
+     
+        Sales sales = new Sales();
+        sales.Show();
+                this.Hide();
+    }
+
+        private void AutoWithdraw_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ManualWithdraw_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button3_Click_1(object sender, EventArgs e)
+        {
+            ProvidersAndCustomersSelector.From = "Sails";
+            ProvidersAndCustomersSelector.ProviderOrCustomer = "customer";
+            ProvidersAndCustomersSelector.sailsForm = this;
+            ProvidersAndCustomersSelector providersAndCustomersSelector = new ProvidersAndCustomersSelector();
+            providersAndCustomersSelector.Show();
+
+
+        }
+
+        private void MatName_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BuyingParty_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Notes_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void SaleDate_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TotalPrice_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void MaxQuantInStock_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void WithdrawGroup_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox2_Enter(object sender, EventArgs e)
+        {
 
         }
     }

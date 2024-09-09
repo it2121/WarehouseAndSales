@@ -17,18 +17,32 @@ namespace WarehouseAndSales
         public static int fromWarehouseID = 0;
         public static int MatID = 0;
         public static string Action = "";
+        public static SalesEditor SailsForm ;
+        public static BuyingEditor BuyingForm;
         public WarehouseSelector()
         {
             InitializeComponent();
-            DataTable dt = BAL.GetAllWarehouses();
-           warehousesDG.DataSource = dt;
+            if (From.Equals("WithdrawFromAnotherWarehosue")) {
+                DataTable dt = BAL.GetAllWarehouses();
+                warehousesDG.DataSource = dt;
+            } else if (From.Equals("AutoSalesWithdraw")) {
+                DataTable dt = BAL.GetInstockItemsOfAllWarehousesAndOneMat(MatID);
+                warehousesDG.DataSource = dt;
+
+
+            } else if (From.Equals("AutoBuyingDepo")) {
+                DataTable dt = BAL.GetAllWarehouses();
+                warehousesDG.DataSource = dt;
+
+
+            }
         }
 
         private void warehousesDG_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            fromWarehouseID = Convert.ToInt32(warehousesDG.Rows[e.RowIndex].Cells["ID"].Value.ToString());
             if (From.Equals("WithdrawFromAnotherWarehosue"))
             {
+                fromWarehouseID = Convert.ToInt32(warehousesDG.Rows[e.RowIndex].Cells["ID"].Value.ToString());
 
 
 
@@ -40,7 +54,38 @@ namespace WarehouseAndSales
                 MatSelector matSelector = new MatSelector();
 
                 matSelector.Show();
-                this.Close();
+                this.Hide();
+
+
+
+
+
+            } else  if (From.Equals("AutoSalesWithdraw"))
+            {
+                fromWarehouseID = Convert.ToInt32(warehousesDG.Rows[e.RowIndex].Cells["WarehouseID"].Value.ToString());
+                Global.setWarehousID(fromWarehouseID);
+              //  SailsForm.WarehouseID = toWarehouseID;
+                SailsForm.Show();
+                SailsForm.AutoWithdrawNow();
+
+
+                this.Hide();
+
+
+
+
+
+            }
+            else  if (From.Equals("AutoBuyingDepo"))
+            {
+                fromWarehouseID = Convert.ToInt32(warehousesDG.Rows[e.RowIndex].Cells["ID"].Value.ToString());
+                Global.setWarehousID(fromWarehouseID);
+              //  SailsForm.WarehouseID = toWarehouseID;
+                BuyingForm.Show();
+                BuyingForm.AutoDepoNow();
+
+
+                this.Hide();
 
 
 
@@ -51,6 +96,11 @@ namespace WarehouseAndSales
         }
 
         private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void WarehouseSelector_Load(object sender, EventArgs e)
         {
 
         }

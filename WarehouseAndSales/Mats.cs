@@ -29,30 +29,56 @@ namespace WarehouseAndSales
         private void warehousesDG_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
-            if (From.Equals("Deposit") || From.Equals("Withdroaw")) { 
-
-            WarehouseMats.WarehouseID = Convert.ToInt32(matsDG.Rows[e.RowIndex].Cells["ID"].Value.ToString());
-            WarehouseMats warehouseMats = new WarehouseMats();
-            warehouseMats.Show();
-            this.Close();
-            }
-            else
+           
+            DataGridViewButtonCell btn = (DataGridViewButtonCell)matsDG.Rows[e.RowIndex].Cells[e.ColumnIndex];
+            if (btn.Value.Equals("تعديل"))
             {
 
 
 
+                MatID = Convert.ToInt32(matsDG.Rows[e.RowIndex].Cells["ID"].Value.ToString());
+      
 
-
+                MatsEditor.MatID = MatID;
+                MatsEditor matsEditor = new MatsEditor();
+                matsEditor.Show();
+                this.Hide();
             }
-
             
-
 
             //MessageBox.Show(matsDG.Rows[e.RowIndex].Cells["ID"].Value.ToString());
 
 
 
 
+        }
+
+        private void Return_Click(object sender, EventArgs e)
+        {
+            Home home = new Home();
+            home.Show();
+            this.Hide();
+        }
+
+       protected override void OnFormClosing(FormClosingEventArgs e)
+        {
+
+            Home home = new Home();
+            home.Show();
+            this.Hide();
+        }
+
+        private void Mats_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            MatsEditor.MatID = 0;
+            MatsEditor matsEditor = new MatsEditor();
+            matsEditor.Show();
+            this.Hide();
         }
     }
 }

@@ -46,7 +46,7 @@ namespace WarehouseAndSales
                     MatToWarehouseAction.Action = warehousesRecordsDG.Rows[e.RowIndex].Cells["MovingAction"].Value.ToString();
                     MatToWarehouseAction matToWarehouseAction = new MatToWarehouseAction();
                     matToWarehouseAction.Show();
-                    this.Close();
+                    this.Hide();
 
 
                 }
@@ -56,6 +56,22 @@ namespace WarehouseAndSales
 
 
 
+        }
+
+        private void Return_Click(object sender, EventArgs e)
+        {
+            WarehouseMats warehouseMats = new WarehouseMats();
+            warehouseMats.Show();
+            this.Hide();
+
+        }
+
+        protected override void OnFormClosing(FormClosingEventArgs e)
+        {
+
+            WarehouseMats warehouseMats = new WarehouseMats();
+            warehouseMats.Show();
+            this.Hide();
         }
     }
 }

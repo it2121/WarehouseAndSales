@@ -18,6 +18,7 @@ namespace WarehouseAndSales
         public static int MatID = 0;
         public static string Action = "";
         public static bool selectMatFromWarehouse = false;
+        public static BuyingEditor buyingForm;
         public MatSelector()
         {
             InitializeComponent();
@@ -41,7 +42,14 @@ namespace WarehouseAndSales
                 dt = BAL.GetAllItemsWithInStock();
                 dt = Helper.RemoveDuplicateRows(dt, "ID");
 
+            }   if (From.Equals("BuyingEditor"))
+            {
+
+                dt = BAL.GetAllMats();
+                dt = Helper.RemoveDuplicateRows(dt, "ID");
+
             }
+
 
             matsDG.DataSource = dt;
 
@@ -59,7 +67,7 @@ namespace WarehouseAndSales
                 MatToWarehouseAction.Action = Action;
                 MatToWarehouseAction matToWarehouseAction = new MatToWarehouseAction();
                 matToWarehouseAction.Show();
-                this.Close();
+                this.Hide();
 
 
             }
@@ -73,7 +81,7 @@ namespace WarehouseAndSales
                 MatToWarehouseAction.Action = Action;
                 MatToWarehouseAction matToWarehouseAction = new MatToWarehouseAction();
                 matToWarehouseAction.Show();
-                this.Close();
+                this.Hide();
             }
             else if (From.Equals("SalesEditor"))
             {
@@ -82,10 +90,34 @@ namespace WarehouseAndSales
                 SalesEditor.MatID = MatID;
                 SalesEditor salesEditor = new SalesEditor ();
                 salesEditor.Show();
-                this.Close();
+                this.Hide();
+
+            }      else if (From.Equals("BuyingEditor"))
+            {
+
+
+                buyingForm.MatID = MatID;
+                buyingForm.setMatName();
+                buyingForm.Show();
+                this.Hide();
 
             }
 
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void MatSelector_Load(object sender, EventArgs e)
+        {
 
         }
     }

@@ -40,8 +40,21 @@ namespace WarehouseAndSales
             else
             {
                 ActionList.SelectedItem = Action;
+                //   ActionList.Text = Action;
             }
-            
+
+
+            if (Action.Equals("سحب من مخزن اخر"))
+            {
+
+
+                ActionList.Enabled = false;
+
+                // ActionList.Text =  toWarehouseName + "  سحبت هذه المادة الى المخزن المعنون";
+
+
+
+            }
 
         }
 
@@ -52,32 +65,33 @@ namespace WarehouseAndSales
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (!Edit) {
+            if (!Edit)
+            {
 
-                if (Action.Equals("سحب") || Action.Equals("ايداع"))
+                if (Action.Equals("سحب") || Action.Equals("ايداع") || Action.Equals("تالف"))
                 {
                     BAL.InsertIntoMatToWarehouses(MatID, WarehouseID, Convert.ToInt32(Quant.Text), MovingDate.Text, Notes.Text, ActionList.Text);
 
 
-                   
+
                 }
                 else if (Action.Equals("سحب من مخزن اخر"))
                 {
                     string fromWarehouseName = BAL.GetWarehouseName(fromWarehouseID).Rows[0][0].ToString();
                     string toWarehouseName = BAL.GetWarehouseName(WarehouseID).Rows[0][0].ToString();
                     //سحب من مخزن الى مخزن جديد
-                    BAL.InsertIntoMatToWarehouses(MatID, fromWarehouseID, Convert.ToInt32(Quant.Text), MovingDate.Text, Notes.Text + " (" + toWarehouseName + ")  سحبت هذه المادة الى المخزن المعنون", "سحب");
+                    BAL.InsertIntoMatToWarehouses(MatID, fromWarehouseID, Convert.ToInt32(Quant.Text), MovingDate.Text, Notes.Text + " (" + toWarehouseName + ")  سحبت الى", "نقل - سحب");
                     // ايداع الى الخزن الجديد
-                    BAL.InsertIntoMatToWarehouses(MatID, WarehouseID, Convert.ToInt32(Quant.Text), MovingDate.Text, Notes.Text + " (" + fromWarehouseName + ")  سحبت هذه المادة من المخزن المعنون", "ايداع");
+                    BAL.InsertIntoMatToWarehouses(MatID, WarehouseID, Convert.ToInt32(Quant.Text), MovingDate.Text, Notes.Text + " (" + fromWarehouseName + ")  سحب من", "نقل - ايداع");
 
 
 
 
 
-                  
+
 
                 }
-             
+
             }
             else
             {
@@ -90,12 +104,33 @@ namespace WarehouseAndSales
             WarehouseMats.WarehouseID = WarehouseID;
             WarehouseMats warehouseMats = new WarehouseMats();
             warehouseMats.Show();
-            this.Close();
+            this.Hide();
         }
 
         private void ActionList_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+        protected override void OnFormClosing(FormClosingEventArgs e)
+        {
+
+            Edit = false;
+            WarehouseMats.WarehouseID = WarehouseID;
+            WarehouseMats warehouseMats = new WarehouseMats();
+            warehouseMats.Show();
+            this.Hide();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            BAL.DeleteMatToWarehouses(RecordID);
+
+
+            Edit = false;
+            WarehouseMats.WarehouseID = WarehouseID;
+            WarehouseMats warehouseMats = new WarehouseMats();
+            warehouseMats.Show();
+            this.Hide();
         }
     }
 }

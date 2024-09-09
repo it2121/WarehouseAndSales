@@ -1,6 +1,7 @@
-﻿namespace WarehouseAndSales
+﻿
+namespace WarehouseAndSales
 {
-    partial class Mats
+    partial class ProvidersAndCustomers
     {
         /// <summary>
         /// Required designer variable.
@@ -32,6 +33,8 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
+            this.Return = new System.Windows.Forms.Button();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.button2 = new System.Windows.Forms.Button();
@@ -39,16 +42,34 @@
             this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
-            this.matsDG = new System.Windows.Forms.DataGridView();
-            this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
-            this.Return = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.ProvidersAndCustomersDG = new System.Windows.Forms.DataGridView();
             this.Select = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.flowLayoutPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.matsDG)).BeginInit();
             this.flowLayoutPanel3.SuspendLayout();
+            this.flowLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ProvidersAndCustomersDG)).BeginInit();
             this.SuspendLayout();
+            // 
+            // flowLayoutPanel3
+            // 
+            this.flowLayoutPanel3.BackColor = System.Drawing.Color.White;
+            this.flowLayoutPanel3.Controls.Add(this.Return);
+            this.flowLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.flowLayoutPanel3.Location = new System.Drawing.Point(0, 0);
+            this.flowLayoutPanel3.Name = "flowLayoutPanel3";
+            this.flowLayoutPanel3.Size = new System.Drawing.Size(910, 81);
+            this.flowLayoutPanel3.TabIndex = 8;
+            // 
+            // Return
+            // 
+            this.Return.Location = new System.Drawing.Point(3, 3);
+            this.Return.Name = "Return";
+            this.Return.Size = new System.Drawing.Size(183, 59);
+            this.Return.TabIndex = 2;
+            this.Return.Text = "الرجوع";
+            this.Return.UseVisualStyleBackColor = true;
+            this.Return.Click += new System.EventHandler(this.Return_Click);
             // 
             // flowLayoutPanel1
             // 
@@ -60,10 +81,10 @@
             this.flowLayoutPanel1.Controls.Add(this.button5);
             this.flowLayoutPanel1.Controls.Add(this.button6);
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(1082, 0);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(910, 0);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(209, 662);
-            this.flowLayoutPanel1.TabIndex = 3;
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(209, 705);
+            this.flowLayoutPanel1.TabIndex = 9;
             // 
             // flowLayoutPanel2
             // 
@@ -85,7 +106,7 @@
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(212, 64);
             this.button2.TabIndex = 1;
-            this.button2.Text = "اضافة مادة جديدة";
+            this.button2.Text = "اضافة جديد";
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
@@ -141,12 +162,21 @@
             this.button6.Text = "button6";
             this.button6.UseVisualStyleBackColor = false;
             // 
-            // matsDG
+            // panel1
             // 
-            this.matsDG.AllowUserToAddRows = false;
-            this.matsDG.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.matsDG.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.matsDG.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(232)))), ((int)(((byte)(239)))));
+            this.panel1.Controls.Add(this.ProvidersAndCustomersDG);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(0, 81);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(910, 624);
+            this.panel1.TabIndex = 10;
+            // 
+            // ProvidersAndCustomersDG
+            // 
+            this.ProvidersAndCustomersDG.AllowUserToAddRows = false;
+            this.ProvidersAndCustomersDG.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.ProvidersAndCustomersDG.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.ProvidersAndCustomersDG.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(232)))), ((int)(((byte)(239)))));
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -154,9 +184,9 @@
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.matsDG.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.matsDG.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.matsDG.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ProvidersAndCustomersDG.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.ProvidersAndCustomersDG.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.ProvidersAndCustomersDG.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Select});
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
@@ -165,11 +195,11 @@
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.matsDG.DefaultCellStyle = dataGridViewCellStyle3;
-            this.matsDG.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.matsDG.Location = new System.Drawing.Point(0, 0);
-            this.matsDG.Name = "matsDG";
-            this.matsDG.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.ProvidersAndCustomersDG.DefaultCellStyle = dataGridViewCellStyle3;
+            this.ProvidersAndCustomersDG.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ProvidersAndCustomersDG.Location = new System.Drawing.Point(0, 0);
+            this.ProvidersAndCustomersDG.Name = "ProvidersAndCustomersDG";
+            this.ProvidersAndCustomersDG.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
@@ -177,44 +207,15 @@
             dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.matsDG.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
-            this.matsDG.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
-            this.matsDG.RowTemplate.DividerHeight = 2;
-            this.matsDG.RowTemplate.Height = 44;
-            this.matsDG.RowTemplate.ReadOnly = true;
-            this.matsDG.ShowEditingIcon = false;
-            this.matsDG.Size = new System.Drawing.Size(1082, 581);
-            this.matsDG.TabIndex = 6;
-            this.matsDG.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.warehousesDG_CellContentClick);
-            // 
-            // flowLayoutPanel3
-            // 
-            this.flowLayoutPanel3.BackColor = System.Drawing.Color.White;
-            this.flowLayoutPanel3.Controls.Add(this.Return);
-            this.flowLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.flowLayoutPanel3.Location = new System.Drawing.Point(0, 0);
-            this.flowLayoutPanel3.Name = "flowLayoutPanel3";
-            this.flowLayoutPanel3.Size = new System.Drawing.Size(1082, 81);
-            this.flowLayoutPanel3.TabIndex = 7;
-            // 
-            // Return
-            // 
-            this.Return.Location = new System.Drawing.Point(3, 3);
-            this.Return.Name = "Return";
-            this.Return.Size = new System.Drawing.Size(183, 59);
-            this.Return.TabIndex = 2;
-            this.Return.Text = "الرجوع";
-            this.Return.UseVisualStyleBackColor = true;
-            this.Return.Click += new System.EventHandler(this.Return_Click);
-            // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.matsDG);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(0, 81);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1082, 581);
-            this.panel1.TabIndex = 8;
+            this.ProvidersAndCustomersDG.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            this.ProvidersAndCustomersDG.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
+            this.ProvidersAndCustomersDG.RowTemplate.DividerHeight = 2;
+            this.ProvidersAndCustomersDG.RowTemplate.Height = 44;
+            this.ProvidersAndCustomersDG.RowTemplate.ReadOnly = true;
+            this.ProvidersAndCustomersDG.ShowEditingIcon = false;
+            this.ProvidersAndCustomersDG.Size = new System.Drawing.Size(910, 624);
+            this.ProvidersAndCustomersDG.TabIndex = 6;
+            this.ProvidersAndCustomersDG.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.ProvidersAndCustomersDG_CellContentClick);
             // 
             // Select
             // 
@@ -234,40 +235,40 @@
             this.Select.ToolTipText = "تعديل";
             this.Select.UseColumnTextForButtonValue = true;
             // 
-            // Mats
+            // ProvidersAndCustomers
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1291, 662);
+            this.ClientSize = new System.Drawing.Size(1119, 705);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.flowLayoutPanel3);
             this.Controls.Add(this.flowLayoutPanel1);
-            this.MinimumSize = new System.Drawing.Size(995, 701);
-            this.Name = "Mats";
-            this.Text = "Mats";
+            this.MaximizeBox = false;
+            this.Name = "ProvidersAndCustomers";
+            this.Text = "ProvidersAndCustomers";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.Load += new System.EventHandler(this.Mats_Load);
-            this.flowLayoutPanel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.matsDG)).EndInit();
+            this.Load += new System.EventHandler(this.ProvidersAndCustomers_Load);
             this.flowLayoutPanel3.ResumeLayout(false);
+            this.flowLayoutPanel1.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.ProvidersAndCustomersDG)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel3;
+        private System.Windows.Forms.Button Return;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.DataGridView matsDG;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel3;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button Return;
+        private System.Windows.Forms.DataGridView ProvidersAndCustomersDG;
         private System.Windows.Forms.DataGridViewButtonColumn Select;
     }
 }
