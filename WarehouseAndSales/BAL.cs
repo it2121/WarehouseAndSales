@@ -10,12 +10,36 @@ namespace WarehouseAndSales
 {
     internal class BAL
     {
-        public static DataTable GetLatBuyingID()
+        public static DataTable GetCompanyInfo()
+        {
+            SqlCommand cm;
+            cm = DAL.CreateCommand();
+
+            cm.CommandText = "GetCompanyInfo";
+            SqlConnection.ClearAllPools();
+            return DAL.ExecuteSelectCommand(cm);
+        }  public static DataTable GetLogo()
+        {
+            SqlCommand cm;
+            cm = DAL.CreateCommand();
+
+            cm.CommandText = "GetLogo";
+            SqlConnection.ClearAllPools();
+            return DAL.ExecuteSelectCommand(cm);
+        }   public static DataTable GetLatBuyingID()
         {
             SqlCommand cm;
             cm = DAL.CreateCommand();
 
             cm.CommandText = "GetLatBuyingID";
+            SqlConnection.ClearAllPools();
+            return DAL.ExecuteSelectCommand(cm);
+        } public static DataTable GetAllUsers()
+        {
+            SqlCommand cm;
+            cm = DAL.CreateCommand();
+
+            cm.CommandText = "GetAllUsers";
             SqlConnection.ClearAllPools();
             return DAL.ExecuteSelectCommand(cm);
         } public static DataTable GetAllBuying()
@@ -35,7 +59,34 @@ namespace WarehouseAndSales
             SqlConnection.ClearAllPools();
             return DAL.ExecuteSelectCommand(cm);
         }
-        public static DataTable GetBuyingByID(int ID)
+        public static DataTable GetPaymentsOfRecID(int PaymentRecID)
+        {
+            SqlCommand cm;
+            cm = DAL.CreateCommand();
+
+            cm.CommandText = "GetPaymentsOfRecID";
+            cm.Parameters.AddWithValue("@PaymentRecID", PaymentRecID);
+            SqlConnection.ClearAllPools();
+            return DAL.ExecuteSelectCommand(cm);
+        }     public static DataTable GetUserRolesByUserID(int UserID)
+        {
+            SqlCommand cm;
+            cm = DAL.CreateCommand();
+
+            cm.CommandText = "GetUserRolesByUserID";
+            cm.Parameters.AddWithValue("@UserID", UserID);
+            SqlConnection.ClearAllPools();
+            return DAL.ExecuteSelectCommand(cm);
+        }    public static DataTable GetUserByID(int ID)
+        {
+            SqlCommand cm;
+            cm = DAL.CreateCommand();
+
+            cm.CommandText = "GetUserByID";
+            cm.Parameters.AddWithValue("@ID", ID);
+            SqlConnection.ClearAllPools();
+            return DAL.ExecuteSelectCommand(cm);
+        }    public static DataTable GetBuyingByID(int ID)
         {
             SqlCommand cm;
             cm = DAL.CreateCommand();
@@ -44,7 +95,16 @@ namespace WarehouseAndSales
             cm.Parameters.AddWithValue("@ID", ID);
             SqlConnection.ClearAllPools();
             return DAL.ExecuteSelectCommand(cm);
-        }   public static DataTable GetSalesRecordByID(int ID)
+        }   public static DataTable GetOnePaymentByID(int ID)
+        {
+            SqlCommand cm;
+            cm = DAL.CreateCommand();
+
+            cm.CommandText = "GetOnePaymentByID";
+            cm.Parameters.AddWithValue("@ID", ID);
+            SqlConnection.ClearAllPools();
+            return DAL.ExecuteSelectCommand(cm);
+        } public static DataTable GetSalesRecordByID(int ID)
         {
             SqlCommand cm;
             cm = DAL.CreateCommand();
@@ -308,7 +368,121 @@ namespace WarehouseAndSales
 
 
         }
-        public static bool InsertMat(string MatName, string MatType, int MatUnitWeight, int MatUnitSize, string StorageType,
+        public static bool UpdatePayments(int PaymentAmount, string PaymentDate, int PaymentRecID, string PaymentType,int ID)
+        {
+
+
+
+            SqlCommand cm;
+            cm = DAL.CreateCommand();
+            if (cm == null) { return false; }
+            cm.CommandText = "UpdatePayments";
+
+            cm.Parameters.AddWithValue("@PaymentAmount", PaymentAmount);
+            cm.Parameters.AddWithValue("@PaymentDate", PaymentDate);
+            cm.Parameters.AddWithValue("@PaymentRecID", PaymentRecID);
+            cm.Parameters.AddWithValue("@PaymentType", PaymentType);
+            cm.Parameters.AddWithValue("@ID", ID);
+
+
+
+
+
+            SqlConnection.ClearAllPools();
+            return DAL.ExecuteCommand(cm);
+
+
+
+        }  
+        
+        
+        public static bool UpdateUser(string username, string password, string fullname,int ID)
+        {
+
+
+            SqlCommand cm;
+            cm = DAL.CreateCommand();
+            if (cm == null) { return false; }
+            cm.CommandText = "UpdateUser";
+
+            cm.Parameters.AddWithValue("@username", username);
+            cm.Parameters.AddWithValue("@password", password);
+            cm.Parameters.AddWithValue("@fullname", fullname);
+            cm.Parameters.AddWithValue("@ID", ID);
+
+            SqlConnection.ClearAllPools();
+            return DAL.ExecuteCommand(cm);
+
+        } 
+        
+              
+        public static bool InsertUser(string username, string password, string fullname)
+        {
+
+
+            SqlCommand cm;
+            cm = DAL.CreateCommand();
+            if (cm == null) { return false; }
+            cm.CommandText = "InsertUser";
+
+            cm.Parameters.AddWithValue("@username", username);
+            cm.Parameters.AddWithValue("@password", password);
+            cm.Parameters.AddWithValue("@fullname", fullname);
+
+            SqlConnection.ClearAllPools();
+            return DAL.ExecuteCommand(cm);
+
+        } 
+        
+        
+        public static bool InsertRoleToUser(int UserID, string UserRole)
+        {
+
+
+
+            SqlCommand cm;
+            cm = DAL.CreateCommand();
+            if (cm == null) { return false; }
+            cm.CommandText = "InsertRoleToUser";
+
+            cm.Parameters.AddWithValue("@UserID", UserID);
+            cm.Parameters.AddWithValue("@UserRole", UserRole);
+
+
+
+
+
+            SqlConnection.ClearAllPools();
+            return DAL.ExecuteCommand(cm);
+
+
+
+        } public static bool InsertIntoPayments(int PaymentAmount, string PaymentDate, int PaymentRecID, string PaymentType)
+        {
+
+
+
+            SqlCommand cm;
+            cm = DAL.CreateCommand();
+            if (cm == null) { return false; }
+            cm.CommandText = "InsertIntoPayments";
+
+            cm.Parameters.AddWithValue("@PaymentAmount", PaymentAmount);
+            cm.Parameters.AddWithValue("@PaymentDate", PaymentDate);
+            cm.Parameters.AddWithValue("@PaymentRecID", PaymentRecID);
+            cm.Parameters.AddWithValue("@PaymentType", PaymentType);
+
+
+
+
+
+            SqlConnection.ClearAllPools();
+            return DAL.ExecuteCommand(cm);
+
+
+
+        }
+               public static bool InsertMat(string MatName, string MatType, int MatUnitWeight, int MatUnitSize, string StorageType,
 
            string Notes)
         {
@@ -530,7 +704,56 @@ string Notes)
 
 
 
-        public static bool DeleteFromBuying(int ID)
+        public static bool DeleteUser(int ID)
+        {
+
+
+
+            SqlCommand cm;
+            cm = DAL.CreateCommand();
+            if (cm == null) { return false; }
+            cm.CommandText = "DeleteUser";
+
+            cm.Parameters.AddWithValue("@ID", ID);
+            SqlConnection.ClearAllPools();
+            return DAL.ExecuteCommand(cm);
+
+
+
+        }     public static bool DeleteAllRolesFromUser(int UserID)
+        {
+
+
+
+            SqlCommand cm;
+            cm = DAL.CreateCommand();
+            if (cm == null) { return false; }
+            cm.CommandText = "DeleteAllRolesFromUser";
+
+            cm.Parameters.AddWithValue("@UserID", UserID);
+            SqlConnection.ClearAllPools();
+            return DAL.ExecuteCommand(cm);
+
+
+
+        }  public static bool DeletePayment(int ID)
+        {
+
+
+
+            SqlCommand cm;
+            cm = DAL.CreateCommand();
+            if (cm == null) { return false; }
+            cm.CommandText = "DeletePayment";
+
+            cm.Parameters.AddWithValue("@ID", ID);
+            SqlConnection.ClearAllPools();
+            return DAL.ExecuteCommand(cm);
+
+
+
+        }
+          public static bool DeleteFromBuying(int ID)
         {
 
 
@@ -727,6 +950,51 @@ string Notes)
             cm.Parameters.AddWithValue("@Notes", Notes);
             cm.Parameters.AddWithValue("@MovingAction", MovingAction);
             cm.Parameters.AddWithValue("@ID", ID);
+
+
+
+
+
+            SqlConnection.ClearAllPools();
+            return DAL.ExecuteCommand(cm);
+
+
+
+        }  public static bool ChangeLogo(byte[] Logo
+            )
+        {
+            SqlCommand cm;
+            cm = DAL.CreateCommand();
+            if (cm == null) { return false; }
+            cm.CommandText = "ChangeLogo";
+
+            cm.Parameters.AddWithValue("@Logo", Logo);
+
+
+
+
+
+
+            SqlConnection.ClearAllPools();
+            return DAL.ExecuteCommand(cm);
+
+
+
+        }public static bool UpdateCompanyInfo(string CompanyName, string SubName, string CompanyAddress, string CompanyPhone
+            , string CompanyEmail, string CompanyWebSite
+            )
+        {
+            SqlCommand cm;
+            cm = DAL.CreateCommand();
+            if (cm == null) { return false; }
+            cm.CommandText = "UpdateCompanyInfo";
+
+            cm.Parameters.AddWithValue("@CompanyName", CompanyName);
+            cm.Parameters.AddWithValue("@SubName", SubName);
+            cm.Parameters.AddWithValue("@CompanyAddress", CompanyAddress);
+            cm.Parameters.AddWithValue("@CompanyPhone", CompanyPhone);
+            cm.Parameters.AddWithValue("@CompanyEmail", CompanyEmail);
+            cm.Parameters.AddWithValue("@CompanyWebSite", CompanyWebSite);
 
 
 

@@ -50,6 +50,19 @@ namespace WarehouseAndSales
                     this.Hide();
 
 
+                }  else if (btn.Value.Equals("الدفعات"))
+                {
+
+
+
+                    int ID = Convert.ToInt32(SalesDG.Rows[e.RowIndex].Cells["ID"].Value.ToString());
+                    Payments.RecID = ID;
+                    Payments.PaymentType = "Income";
+                    Payments pp = new Payments();
+                    pp.Show();
+                    this.Hide();
+
+
                 }
 
 

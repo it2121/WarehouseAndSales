@@ -32,5 +32,31 @@ namespace WarehouseAndSales
             //Datatable which contains unique records will be return as output.
             return dTable;
         }
+
+        public static bool UserHasRole(string UserRole)
+        {
+            bool HasRole = false;
+            foreach (DataRow dr in Global.getUserRoles().Rows)
+            {
+                if (dr["UserRole"].Equals(UserRole))
+                    HasRole = true;
+
+
+            }
+            return HasRole;
+        }  
+        
+        public static bool UserHasRole(string UserRole ,DataTable Roles)
+        {
+            bool HasRole = false;
+            foreach (DataRow dr in Roles.Rows)
+            {
+                if (dr["UserRole"].Equals(UserRole))
+                    HasRole = true;
+
+
+            }
+            return HasRole;
+        }
     }
 }

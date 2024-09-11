@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
@@ -11,17 +12,62 @@ using System.Windows.Forms;
 
 namespace WarehouseAndSales
 {
-    // blue #0d5dba
-    // dark #262e36
-    // green #56c077
-    // gray #e6e9f0
+    // dark #33334d
+    // darker #009788
+    // green #009788
+    // gray #f0f0f0
     public partial class Home : Form
     {
         public Home()
         {
             InitializeComponent();
-        }
 
+          
+
+          
+            LogoPanel.BackgroundImage = returnLogo();
+            DataTable dt = BAL.GetCompanyInfo();
+            foreach (DataRow dr in dt.Rows)
+            {
+                CompanyName.Text = dr["CompanyName"].ToString();
+                SubName.Text = dr["SubName"].ToString();
+
+            }
+
+            SetBtnsVisibility();
+        }
+        public void SetBtnsVisibility() {
+
+
+            Mats.Visible = Helper.UserHasRole("Mats");
+            Warehouses.Visible = Helper.UserHasRole("Warehouses");
+            sellings.Visible = Helper.UserHasRole("sellings");
+            Buyings.Visible = Helper.UserHasRole("Buyings");
+           // Expences.Visible = Helper.UserHasRole("Expences");
+           // EmpsAndSalarys.Visible = Helper.UserHasRole("EmpsAndSalarys");
+            ProvidersAndBuyers.Visible = Helper.UserHasRole("ProvidersAndBuyers");
+            ProvidersAndBuyers2.Visible = Helper.UserHasRole("ProvidersAndBuyers");
+            CompanyInfo.Visible = Helper.UserHasRole("CompanyInfo");
+            UsersManagment.Visible = Helper.UserHasRole("UsersManagment");
+
+        }
+        public Image returnLogo()
+        {
+            DataTable dt  = BAL.GetLogo();
+            byte[] imageBA = (byte[])dt.Rows[0][0];
+   
+            try
+            {
+                MemoryStream ms = new MemoryStream(imageBA, 0, imageBA.Length);
+                ms.Write(imageBA, 0, imageBA.Length);
+                return Image.FromStream(ms, true);
+            }
+            catch { 
+            
+            }
+            return null;
+
+        }
         private void button1_Click(object sender, EventArgs e)
         {
             Warehouses warehouses = new Warehouses();   
@@ -69,6 +115,35 @@ namespace WarehouseAndSales
             Buying b = new Buying();
             b.Show();
             this.Hide();
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            CompanyInfoEditor c = new CompanyInfoEditor();
+            c.Show();
+            
+        }
+
+        private void Home_Load(object sender, EventArgs e)
+        {
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void CompanyName_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            Users u = new Users();
+            u.Show();
+            this.Hide();
+
         }
     }
 }

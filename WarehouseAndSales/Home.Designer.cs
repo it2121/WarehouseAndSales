@@ -30,181 +30,288 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.Mats = new System.Windows.Forms.Button();
+            this.Warehouses = new System.Windows.Forms.Button();
+            this.sellings = new System.Windows.Forms.Button();
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
+            this.ProvidersAndBuyers = new System.Windows.Forms.Button();
+            this.ProvidersAndBuyers2 = new System.Windows.Forms.Button();
+            this.Buyings = new System.Windows.Forms.Button();
+            this.CompanyInfo = new System.Windows.Forms.Button();
+            this.UsersManagment = new System.Windows.Forms.Button();
+            this.LogoPanel = new System.Windows.Forms.FlowLayoutPanel();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
-            this.button6 = new System.Windows.Forms.Button();
+            this.CompanyName = new System.Windows.Forms.Label();
+            this.SubName = new System.Windows.Forms.Label();
             this.flowLayoutPanel2.SuspendLayout();
+            this.panel1.SuspendLayout();
+            this.flowLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // button2
+            // Mats
             // 
-            this.button2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(232)))), ((int)(((byte)(239)))));
-            this.button2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Times New Roman", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(0, 153);
-            this.button2.Margin = new System.Windows.Forms.Padding(0, 0, 0, 5);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(212, 64);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "المواد";
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.Mats.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.Mats.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(77)))));
+            this.Mats.Dock = System.Windows.Forms.DockStyle.Top;
+            this.Mats.FlatAppearance.BorderSize = 0;
+            this.Mats.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Mats.Font = new System.Drawing.Font("Times New Roman", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Mats.ForeColor = System.Drawing.Color.White;
+            this.Mats.Location = new System.Drawing.Point(0, 69);
+            this.Mats.Margin = new System.Windows.Forms.Padding(0, 0, 0, 5);
+            this.Mats.Name = "Mats";
+            this.Mats.Size = new System.Drawing.Size(212, 64);
+            this.Mats.TabIndex = 1;
+            this.Mats.Text = "المواد";
+            this.Mats.UseVisualStyleBackColor = false;
+            this.Mats.Click += new System.EventHandler(this.button2_Click);
             // 
-            // button1
+            // Warehouses
             // 
-            this.button1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(232)))), ((int)(((byte)(239)))));
-            this.button1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Times New Roman", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(0, 84);
-            this.button1.Margin = new System.Windows.Forms.Padding(0, 0, 0, 5);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(212, 64);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "المخازن";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.Warehouses.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.Warehouses.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(77)))));
+            this.Warehouses.Dock = System.Windows.Forms.DockStyle.Top;
+            this.Warehouses.FlatAppearance.BorderSize = 0;
+            this.Warehouses.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Warehouses.Font = new System.Drawing.Font("Times New Roman", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Warehouses.ForeColor = System.Drawing.Color.White;
+            this.Warehouses.Location = new System.Drawing.Point(0, 0);
+            this.Warehouses.Margin = new System.Windows.Forms.Padding(0, 0, 0, 5);
+            this.Warehouses.Name = "Warehouses";
+            this.Warehouses.Size = new System.Drawing.Size(212, 64);
+            this.Warehouses.TabIndex = 0;
+            this.Warehouses.Text = "المخازن";
+            this.Warehouses.UseVisualStyleBackColor = false;
+            this.Warehouses.Click += new System.EventHandler(this.button1_Click);
             // 
-            // button3
+            // sellings
             // 
-            this.button3.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(232)))), ((int)(((byte)(239)))));
-            this.button3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Times New Roman", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(0, 222);
-            this.button3.Margin = new System.Windows.Forms.Padding(0, 0, 0, 5);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(212, 64);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "المبيعات";
-            this.button3.UseVisualStyleBackColor = false;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.sellings.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.sellings.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(77)))));
+            this.sellings.Dock = System.Windows.Forms.DockStyle.Top;
+            this.sellings.FlatAppearance.BorderSize = 0;
+            this.sellings.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.sellings.Font = new System.Drawing.Font("Times New Roman", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sellings.ForeColor = System.Drawing.Color.White;
+            this.sellings.Location = new System.Drawing.Point(0, 138);
+            this.sellings.Margin = new System.Windows.Forms.Padding(0, 0, 0, 5);
+            this.sellings.Name = "sellings";
+            this.sellings.Size = new System.Drawing.Size(212, 64);
+            this.sellings.TabIndex = 2;
+            this.sellings.Text = "المبيعات";
+            this.sellings.UseVisualStyleBackColor = false;
+            this.sellings.Click += new System.EventHandler(this.button3_Click);
             // 
             // flowLayoutPanel2
             // 
             this.flowLayoutPanel2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.flowLayoutPanel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(46)))), ((int)(((byte)(54)))));
-            this.flowLayoutPanel2.Controls.Add(this.flowLayoutPanel1);
-            this.flowLayoutPanel2.Controls.Add(this.button1);
-            this.flowLayoutPanel2.Controls.Add(this.button2);
-            this.flowLayoutPanel2.Controls.Add(this.button3);
-            this.flowLayoutPanel2.Controls.Add(this.button4);
-            this.flowLayoutPanel2.Controls.Add(this.button5);
-            this.flowLayoutPanel2.Controls.Add(this.button6);
+            this.flowLayoutPanel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(77)))));
+            this.flowLayoutPanel2.Controls.Add(this.Warehouses);
+            this.flowLayoutPanel2.Controls.Add(this.Mats);
+            this.flowLayoutPanel2.Controls.Add(this.sellings);
+            this.flowLayoutPanel2.Controls.Add(this.ProvidersAndBuyers);
+            this.flowLayoutPanel2.Controls.Add(this.ProvidersAndBuyers2);
+            this.flowLayoutPanel2.Controls.Add(this.Buyings);
+            this.flowLayoutPanel2.Controls.Add(this.CompanyInfo);
+            this.flowLayoutPanel2.Controls.Add(this.UsersManagment);
             this.flowLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.flowLayoutPanel2.Location = new System.Drawing.Point(910, 0);
+            this.flowLayoutPanel2.Location = new System.Drawing.Point(910, 81);
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
-            this.flowLayoutPanel2.Size = new System.Drawing.Size(209, 705);
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(209, 624);
             this.flowLayoutPanel2.TabIndex = 4;
+            // 
+            // ProvidersAndBuyers
+            // 
+            this.ProvidersAndBuyers.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.ProvidersAndBuyers.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(77)))));
+            this.ProvidersAndBuyers.Dock = System.Windows.Forms.DockStyle.Top;
+            this.ProvidersAndBuyers.FlatAppearance.BorderSize = 0;
+            this.ProvidersAndBuyers.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ProvidersAndBuyers.Font = new System.Drawing.Font("Times New Roman", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ProvidersAndBuyers.ForeColor = System.Drawing.Color.White;
+            this.ProvidersAndBuyers.Location = new System.Drawing.Point(0, 207);
+            this.ProvidersAndBuyers.Margin = new System.Windows.Forms.Padding(0, 0, 0, 5);
+            this.ProvidersAndBuyers.Name = "ProvidersAndBuyers";
+            this.ProvidersAndBuyers.Size = new System.Drawing.Size(212, 64);
+            this.ProvidersAndBuyers.TabIndex = 5;
+            this.ProvidersAndBuyers.Text = "ادارة الموردين";
+            this.ProvidersAndBuyers.UseVisualStyleBackColor = false;
+            this.ProvidersAndBuyers.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // ProvidersAndBuyers2
+            // 
+            this.ProvidersAndBuyers2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.ProvidersAndBuyers2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(77)))));
+            this.ProvidersAndBuyers2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.ProvidersAndBuyers2.FlatAppearance.BorderSize = 0;
+            this.ProvidersAndBuyers2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ProvidersAndBuyers2.Font = new System.Drawing.Font("Times New Roman", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ProvidersAndBuyers2.ForeColor = System.Drawing.Color.White;
+            this.ProvidersAndBuyers2.Location = new System.Drawing.Point(0, 276);
+            this.ProvidersAndBuyers2.Margin = new System.Windows.Forms.Padding(0, 0, 0, 5);
+            this.ProvidersAndBuyers2.Name = "ProvidersAndBuyers2";
+            this.ProvidersAndBuyers2.Size = new System.Drawing.Size(212, 64);
+            this.ProvidersAndBuyers2.TabIndex = 6;
+            this.ProvidersAndBuyers2.Text = "ادارة العملاء";
+            this.ProvidersAndBuyers2.UseVisualStyleBackColor = false;
+            this.ProvidersAndBuyers2.Click += new System.EventHandler(this.button5_Click);
+            // 
+            // Buyings
+            // 
+            this.Buyings.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.Buyings.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(77)))));
+            this.Buyings.Dock = System.Windows.Forms.DockStyle.Top;
+            this.Buyings.FlatAppearance.BorderSize = 0;
+            this.Buyings.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Buyings.Font = new System.Drawing.Font("Times New Roman", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Buyings.ForeColor = System.Drawing.Color.White;
+            this.Buyings.Location = new System.Drawing.Point(0, 345);
+            this.Buyings.Margin = new System.Windows.Forms.Padding(0, 0, 0, 5);
+            this.Buyings.Name = "Buyings";
+            this.Buyings.Size = new System.Drawing.Size(212, 64);
+            this.Buyings.TabIndex = 7;
+            this.Buyings.Text = "المشتريات";
+            this.Buyings.UseVisualStyleBackColor = false;
+            this.Buyings.Click += new System.EventHandler(this.button6_Click);
+            // 
+            // CompanyInfo
+            // 
+            this.CompanyInfo.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.CompanyInfo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(77)))));
+            this.CompanyInfo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.CompanyInfo.FlatAppearance.BorderSize = 0;
+            this.CompanyInfo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.CompanyInfo.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CompanyInfo.ForeColor = System.Drawing.Color.White;
+            this.CompanyInfo.Location = new System.Drawing.Point(0, 414);
+            this.CompanyInfo.Margin = new System.Windows.Forms.Padding(0, 0, 0, 5);
+            this.CompanyInfo.Name = "CompanyInfo";
+            this.CompanyInfo.Size = new System.Drawing.Size(212, 64);
+            this.CompanyInfo.TabIndex = 8;
+            this.CompanyInfo.Text = "تعديل معلومات الشركة";
+            this.CompanyInfo.UseVisualStyleBackColor = false;
+            this.CompanyInfo.Click += new System.EventHandler(this.button7_Click);
+            // 
+            // UsersManagment
+            // 
+            this.UsersManagment.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.UsersManagment.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(77)))));
+            this.UsersManagment.Dock = System.Windows.Forms.DockStyle.Top;
+            this.UsersManagment.FlatAppearance.BorderSize = 0;
+            this.UsersManagment.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.UsersManagment.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.UsersManagment.ForeColor = System.Drawing.Color.White;
+            this.UsersManagment.Location = new System.Drawing.Point(0, 483);
+            this.UsersManagment.Margin = new System.Windows.Forms.Padding(0, 0, 0, 5);
+            this.UsersManagment.Name = "UsersManagment";
+            this.UsersManagment.Size = new System.Drawing.Size(212, 64);
+            this.UsersManagment.TabIndex = 9;
+            this.UsersManagment.Text = "ادارة المستخدمين";
+            this.UsersManagment.UseVisualStyleBackColor = false;
+            this.UsersManagment.Click += new System.EventHandler(this.button8_Click);
+            // 
+            // LogoPanel
+            // 
+            this.LogoPanel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.LogoPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.LogoPanel.Location = new System.Drawing.Point(9, 7);
+            this.LogoPanel.Margin = new System.Windows.Forms.Padding(0, 0, 0, 20);
+            this.LogoPanel.Name = "LogoPanel";
+            this.LogoPanel.Size = new System.Drawing.Size(209, 64);
+            this.LogoPanel.TabIndex = 4;
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(151)))), ((int)(((byte)(136)))));
+            this.panel1.Controls.Add(this.flowLayoutPanel1);
+            this.panel1.Controls.Add(this.LogoPanel);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1119, 81);
+            this.panel1.TabIndex = 5;
             // 
             // flowLayoutPanel1
             // 
-            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            this.flowLayoutPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(129)))), ((int)(((byte)(116)))));
+            this.flowLayoutPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.flowLayoutPanel1.Controls.Add(this.CompanyName);
+            this.flowLayoutPanel1.Controls.Add(this.SubName);
+            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(910, 0);
             this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(0, 0, 0, 20);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(200, 64);
-            this.flowLayoutPanel1.TabIndex = 4;
+            this.flowLayoutPanel1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(209, 81);
+            this.flowLayoutPanel1.TabIndex = 5;
             // 
-            // button4
+            // CompanyName
             // 
-            this.button4.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(232)))), ((int)(((byte)(239)))));
-            this.button4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Times New Roman", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(0, 291);
-            this.button4.Margin = new System.Windows.Forms.Padding(0, 0, 0, 5);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(212, 64);
-            this.button4.TabIndex = 5;
-            this.button4.Text = "ادارة الموردين";
-            this.button4.UseVisualStyleBackColor = false;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.CompanyName.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.CompanyName.AutoSize = true;
+            this.CompanyName.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CompanyName.ForeColor = System.Drawing.Color.White;
+            this.CompanyName.Location = new System.Drawing.Point(47, 6);
+            this.CompanyName.Margin = new System.Windows.Forms.Padding(3, 6, 3, 3);
+            this.CompanyName.Name = "CompanyName";
+            this.CompanyName.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.CompanyName.Size = new System.Drawing.Size(159, 25);
+            this.CompanyName.TabIndex = 0;
+            this.CompanyName.Text = "CompanyName";
+            this.CompanyName.Click += new System.EventHandler(this.CompanyName_Click);
             // 
-            // button5
+            // SubName
             // 
-            this.button5.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.button5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(232)))), ((int)(((byte)(239)))));
-            this.button5.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button5.FlatAppearance.BorderSize = 0;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Font = new System.Drawing.Font("Times New Roman", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.Location = new System.Drawing.Point(0, 360);
-            this.button5.Margin = new System.Windows.Forms.Padding(0, 0, 0, 5);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(212, 64);
-            this.button5.TabIndex = 6;
-            this.button5.Text = "ادارة العملاء";
-            this.button5.UseVisualStyleBackColor = false;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
-            // 
-            // flowLayoutPanel3
-            // 
-            this.flowLayoutPanel3.BackColor = System.Drawing.Color.White;
-            this.flowLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.flowLayoutPanel3.Location = new System.Drawing.Point(0, 0);
-            this.flowLayoutPanel3.Name = "flowLayoutPanel3";
-            this.flowLayoutPanel3.Size = new System.Drawing.Size(910, 67);
-            this.flowLayoutPanel3.TabIndex = 5;
-            // 
-            // button6
-            // 
-            this.button6.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.button6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(232)))), ((int)(((byte)(239)))));
-            this.button6.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button6.FlatAppearance.BorderSize = 0;
-            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.Font = new System.Drawing.Font("Times New Roman", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.Location = new System.Drawing.Point(0, 429);
-            this.button6.Margin = new System.Windows.Forms.Padding(0, 0, 0, 5);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(212, 64);
-            this.button6.TabIndex = 7;
-            this.button6.Text = "المشتريات";
-            this.button6.UseVisualStyleBackColor = false;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
+            this.SubName.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.SubName.AutoSize = true;
+            this.SubName.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SubName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.SubName.Location = new System.Drawing.Point(111, 40);
+            this.SubName.Margin = new System.Windows.Forms.Padding(3, 6, 3, 3);
+            this.SubName.Name = "SubName";
+            this.SubName.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.SubName.Size = new System.Drawing.Size(95, 24);
+            this.SubName.TabIndex = 1;
+            this.SubName.Text = "SubName";
+            this.SubName.Click += new System.EventHandler(this.label1_Click);
             // 
             // Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(232)))), ((int)(((byte)(239)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             this.ClientSize = new System.Drawing.Size(1119, 705);
-            this.Controls.Add(this.flowLayoutPanel3);
             this.Controls.Add(this.flowLayoutPanel2);
+            this.Controls.Add(this.panel1);
             this.Name = "Home";
             this.Text = "Home";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.Home_Load);
             this.flowLayoutPanel2.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
+            this.flowLayoutPanel1.ResumeLayout(false);
+            this.flowLayoutPanel1.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button Mats;
+        private System.Windows.Forms.Button Warehouses;
+        private System.Windows.Forms.Button sellings;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
+        private System.Windows.Forms.FlowLayoutPanel LogoPanel;
+        private System.Windows.Forms.Button ProvidersAndBuyers;
+        private System.Windows.Forms.Button ProvidersAndBuyers2;
+        private System.Windows.Forms.Button Buyings;
+        private System.Windows.Forms.Button CompanyInfo;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label SubName;
+        private System.Windows.Forms.Label CompanyName;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button UsersManagment;
     }
 }

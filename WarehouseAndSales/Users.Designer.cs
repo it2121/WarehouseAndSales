@@ -1,7 +1,7 @@
 ﻿
 namespace WarehouseAndSales
 {
-    partial class Buying
+    partial class Users
     {
         /// <summary>
         /// Required designer variable.
@@ -29,12 +29,12 @@ namespace WarehouseAndSales
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.buyingDG = new System.Windows.Forms.DataGridView();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.usersDG = new System.Windows.Forms.DataGridView();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.button2 = new System.Windows.Forms.Button();
@@ -46,59 +46,59 @@ namespace WarehouseAndSales
             this.Return = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.Select = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.الدفعات = new System.Windows.Forms.DataGridViewButtonColumn();
-            ((System.ComponentModel.ISupportInitialize)(this.buyingDG)).BeginInit();
+            this.الصلاحيات = new System.Windows.Forms.DataGridViewButtonColumn();
+            ((System.ComponentModel.ISupportInitialize)(this.usersDG)).BeginInit();
             this.flowLayoutPanel1.SuspendLayout();
             this.flowLayoutPanel3.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // buyingDG
+            // usersDG
             // 
-            this.buyingDG.AllowUserToAddRows = false;
-            this.buyingDG.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.buyingDG.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.buyingDG.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(232)))), ((int)(((byte)(239)))));
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.buyingDG.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.buyingDG.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.buyingDG.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.usersDG.AllowUserToAddRows = false;
+            this.usersDG.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.usersDG.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.usersDG.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(232)))), ((int)(((byte)(239)))));
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.usersDG.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            this.usersDG.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.usersDG.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Select,
-            this.الدفعات});
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.buyingDG.DefaultCellStyle = dataGridViewCellStyle4;
-            this.buyingDG.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.buyingDG.Location = new System.Drawing.Point(0, 0);
-            this.buyingDG.Name = "buyingDG";
-            this.buyingDG.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.buyingDG.RowHeadersDefaultCellStyle = dataGridViewCellStyle5;
-            this.buyingDG.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
-            this.buyingDG.RowTemplate.DividerHeight = 2;
-            this.buyingDG.RowTemplate.Height = 44;
-            this.buyingDG.RowTemplate.ReadOnly = true;
-            this.buyingDG.ShowEditingIcon = false;
-            this.buyingDG.Size = new System.Drawing.Size(782, 581);
-            this.buyingDG.TabIndex = 6;
-            this.buyingDG.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.matsDG_CellContentClick);
+            this.الصلاحيات});
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
+            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.usersDG.DefaultCellStyle = dataGridViewCellStyle9;
+            this.usersDG.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.usersDG.Location = new System.Drawing.Point(0, 0);
+            this.usersDG.Name = "usersDG";
+            this.usersDG.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle10.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
+            dataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.usersDG.RowHeadersDefaultCellStyle = dataGridViewCellStyle10;
+            this.usersDG.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
+            this.usersDG.RowTemplate.DividerHeight = 2;
+            this.usersDG.RowTemplate.Height = 44;
+            this.usersDG.RowTemplate.ReadOnly = true;
+            this.usersDG.ShowEditingIcon = false;
+            this.usersDG.Size = new System.Drawing.Size(702, 424);
+            this.usersDG.TabIndex = 6;
+            this.usersDG.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.buyingDG_CellContentClick);
             // 
             // flowLayoutPanel1
             // 
@@ -110,11 +110,10 @@ namespace WarehouseAndSales
             this.flowLayoutPanel1.Controls.Add(this.button5);
             this.flowLayoutPanel1.Controls.Add(this.button6);
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(782, 0);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(702, 0);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(209, 662);
-            this.flowLayoutPanel1.TabIndex = 9;
-            this.flowLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.flowLayoutPanel1_Paint);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(209, 505);
+            this.flowLayoutPanel1.TabIndex = 15;
             // 
             // flowLayoutPanel2
             // 
@@ -124,7 +123,6 @@ namespace WarehouseAndSales
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
             this.flowLayoutPanel2.Size = new System.Drawing.Size(200, 64);
             this.flowLayoutPanel2.TabIndex = 6;
-            this.flowLayoutPanel2.Paint += new System.Windows.Forms.PaintEventHandler(this.flowLayoutPanel2_Paint);
             // 
             // button2
             // 
@@ -137,7 +135,7 @@ namespace WarehouseAndSales
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(212, 64);
             this.button2.TabIndex = 1;
-            this.button2.Text = "اضافة قيد بيع جديد";
+            this.button2.Text = "اضافة مستخدم جديد";
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
@@ -153,7 +151,6 @@ namespace WarehouseAndSales
             this.button3.TabIndex = 2;
             this.button3.Text = "button3";
             this.button3.UseVisualStyleBackColor = false;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button4
             // 
@@ -167,7 +164,6 @@ namespace WarehouseAndSales
             this.button4.TabIndex = 3;
             this.button4.Text = "button4";
             this.button4.UseVisualStyleBackColor = false;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button5
             // 
@@ -181,7 +177,6 @@ namespace WarehouseAndSales
             this.button5.TabIndex = 4;
             this.button5.Text = "button5";
             this.button5.UseVisualStyleBackColor = false;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // button6
             // 
@@ -195,7 +190,6 @@ namespace WarehouseAndSales
             this.button6.TabIndex = 5;
             this.button6.Text = "button6";
             this.button6.UseVisualStyleBackColor = false;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // flowLayoutPanel3
             // 
@@ -204,9 +198,8 @@ namespace WarehouseAndSales
             this.flowLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.flowLayoutPanel3.Location = new System.Drawing.Point(0, 0);
             this.flowLayoutPanel3.Name = "flowLayoutPanel3";
-            this.flowLayoutPanel3.Size = new System.Drawing.Size(782, 81);
-            this.flowLayoutPanel3.TabIndex = 10;
-            this.flowLayoutPanel3.Paint += new System.Windows.Forms.PaintEventHandler(this.flowLayoutPanel3_Paint);
+            this.flowLayoutPanel3.Size = new System.Drawing.Size(702, 81);
+            this.flowLayoutPanel3.TabIndex = 16;
             // 
             // Return
             // 
@@ -220,24 +213,23 @@ namespace WarehouseAndSales
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.buyingDG);
+            this.panel1.Controls.Add(this.usersDG);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 81);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(782, 581);
-            this.panel1.TabIndex = 11;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            this.panel1.Size = new System.Drawing.Size(702, 424);
+            this.panel1.TabIndex = 17;
             // 
             // Select
             // 
             this.Select.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Roboto Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.WhiteSmoke;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Lime;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
-            this.Select.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Roboto Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.WhiteSmoke;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.Lime;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.White;
+            this.Select.DefaultCellStyle = dataGridViewCellStyle7;
             this.Select.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Select.HeaderText = "تعديل";
             this.Select.MinimumWidth = 100;
@@ -246,35 +238,36 @@ namespace WarehouseAndSales
             this.Select.ToolTipText = "تعديل";
             this.Select.UseColumnTextForButtonValue = true;
             // 
-            // الدفعات
+            // الصلاحيات
             // 
-            this.الدفعات.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Roboto Black", 12F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.Lime;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
-            this.الدفعات.DefaultCellStyle = dataGridViewCellStyle3;
-            this.الدفعات.HeaderText = "الدفعات";
-            this.الدفعات.MinimumWidth = 100;
-            this.الدفعات.Name = "الدفعات";
-            this.الدفعات.Text = "الدفعات";
-            this.الدفعات.ToolTipText = "الدفعات";
-            this.الدفعات.UseColumnTextForButtonValue = true;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Roboto Black", 12F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.Lime;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.White;
+            this.الصلاحيات.DefaultCellStyle = dataGridViewCellStyle8;
+            this.الصلاحيات.HeaderText = "الصلاحيات";
+            this.الصلاحيات.MinimumWidth = 100;
+            this.الصلاحيات.Name = "الصلاحيات";
+            this.الصلاحيات.Text = "الصلاحيات";
+            this.الصلاحيات.ToolTipText = "الصلاحيات";
+            this.الصلاحيات.UseColumnTextForButtonValue = true;
             // 
-            // Buying
+            // Users
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(991, 662);
+            this.ClientSize = new System.Drawing.Size(911, 505);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.flowLayoutPanel3);
             this.Controls.Add(this.flowLayoutPanel1);
-            this.Name = "Buying";
-            this.Text = "Buying";
+            this.MaximizeBox = false;
+            this.Name = "Users";
+            this.Text = "Users";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            ((System.ComponentModel.ISupportInitialize)(this.buyingDG)).EndInit();
+            this.Load += new System.EventHandler(this.Users_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.usersDG)).EndInit();
             this.flowLayoutPanel1.ResumeLayout(false);
             this.flowLayoutPanel3.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
@@ -284,7 +277,7 @@ namespace WarehouseAndSales
 
         #endregion
 
-        private System.Windows.Forms.DataGridView buyingDG;
+        private System.Windows.Forms.DataGridView usersDG;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
         private System.Windows.Forms.Button button2;
@@ -296,6 +289,6 @@ namespace WarehouseAndSales
         private System.Windows.Forms.Button Return;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.DataGridViewButtonColumn Select;
-        private System.Windows.Forms.DataGridViewButtonColumn الدفعات;
+        private System.Windows.Forms.DataGridViewButtonColumn الصلاحيات;
     }
 }

@@ -39,6 +39,20 @@ namespace WarehouseAndSales
                 bb.Show();
                 this.Hide();
             }
+            else if (btn.Value.Equals("الدفعات"))
+            {
+
+
+
+                int ID = Convert.ToInt32(buyingDG.Rows[e.RowIndex].Cells["ID"].Value.ToString());
+                Payments.RecID = ID;
+                Payments.PaymentType = "Outgoing";
+                Payments pp = new Payments();
+                pp.Show();
+                this.Hide();
+
+
+            }
         }
         protected override void OnFormClosing(FormClosingEventArgs e)
         {
@@ -63,6 +77,46 @@ namespace WarehouseAndSales
             BuyingEditor buyingEditor = new BuyingEditor();
             buyingEditor.Show();
             this.Hide();
+        }
+
+        private void flowLayoutPanel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void flowLayoutPanel3_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
