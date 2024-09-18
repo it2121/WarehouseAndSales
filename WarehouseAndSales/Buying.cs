@@ -20,6 +20,8 @@ namespace WarehouseAndSales
             InitializeComponent();
             DataTable dt = BAL.GetAllBuying();
             buyingDG.DataSource = dt;
+            buyingDG.Columns["ID"].Visible = false;
+
         }
 
         private void matsDG_CellContentClick(object sender, DataGridViewCellEventArgs e)

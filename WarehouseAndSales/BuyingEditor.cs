@@ -224,5 +224,10 @@ namespace WarehouseAndSales
             b.Show();
             this.Hide();
         }
+
+        private void BuyingEditor_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

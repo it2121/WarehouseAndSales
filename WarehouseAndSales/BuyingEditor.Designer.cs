@@ -357,6 +357,7 @@ namespace WarehouseAndSales
             this.Name = "BuyingEditor";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "BuyingEditor";
+            this.Load += new System.EventHandler(this.BuyingEditor_Load);
             this.WithdrawGroup.ResumeLayout(false);
             this.WithdrawGroup.PerformLayout();
             this.groupBox2.ResumeLayout(false);

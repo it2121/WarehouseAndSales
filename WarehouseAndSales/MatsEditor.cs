@@ -35,6 +35,8 @@ namespace WarehouseAndSales
                     MatUnitSize.Text = dr["MatUnitSize"].ToString();
                     StorageType.Text = dr["StorageType"].ToString();
                     Notes.Text = dr["Notes"].ToString();
+                    RetailPrice.Text = dr["RetailPrice"].ToString();
+                    WholesalePrice.Text = dr["WholesalePrice"].ToString();
 
 
                 }
@@ -63,7 +65,8 @@ namespace WarehouseAndSales
              Convert.ToInt32(MatUnitSize.Text) ,
                 StorageType.Text ,
                 Notes.Text 
-                    
+                    ,Convert.ToInt32(RetailPrice.Text),
+                Convert.ToInt32(WholesalePrice.Text)
                     
                     
                     );
@@ -85,7 +88,8 @@ namespace WarehouseAndSales
                Notes.Text,
               MatID
 
-
+               , Convert.ToInt32(RetailPrice.Text),
+                Convert.ToInt32(WholesalePrice.Text)
 
                    );
 

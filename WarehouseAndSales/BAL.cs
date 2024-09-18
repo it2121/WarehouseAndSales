@@ -34,7 +34,29 @@ namespace WarehouseAndSales
             cm.CommandText = "GetLatBuyingID";
             SqlConnection.ClearAllPools();
             return DAL.ExecuteSelectCommand(cm);
-        } public static DataTable GetAllUsers()
+        } 
+        
+        
+        public static DataTable GetAllExpense()
+        {
+            SqlCommand cm;
+            cm = DAL.CreateCommand();
+
+            cm.CommandText = "GetAllExpense";
+            SqlConnection.ClearAllPools();
+            return DAL.ExecuteSelectCommand(cm);
+        }
+             public static DataTable GetAllEmps()
+        {
+            SqlCommand cm;
+            cm = DAL.CreateCommand();
+
+            cm.CommandText = "GetAllEmps";
+            SqlConnection.ClearAllPools();
+            return DAL.ExecuteSelectCommand(cm);
+        }
+                
+        public static DataTable GetAllUsers()
         {
             SqlCommand cm;
             cm = DAL.CreateCommand();
@@ -42,7 +64,12 @@ namespace WarehouseAndSales
             cm.CommandText = "GetAllUsers";
             SqlConnection.ClearAllPools();
             return DAL.ExecuteSelectCommand(cm);
-        } public static DataTable GetAllBuying()
+        }
+        
+        
+        
+        
+        public static DataTable GetAllBuying()
         {
             SqlCommand cm;
             cm = DAL.CreateCommand();
@@ -77,7 +104,55 @@ namespace WarehouseAndSales
             cm.Parameters.AddWithValue("@UserID", UserID);
             SqlConnection.ClearAllPools();
             return DAL.ExecuteSelectCommand(cm);
-        }    public static DataTable GetUserByID(int ID)
+        } 
+        
+        
+        public static DataTable GetSaleRecordForPrint(int ID)
+        {
+            SqlCommand cm;
+            cm = DAL.CreateCommand();
+
+            cm.CommandText = "GetSaleRecordForPrint";
+            cm.Parameters.AddWithValue("@ID", ID);
+            SqlConnection.ClearAllPools();
+            return DAL.ExecuteSelectCommand(cm);
+        }  
+               
+        public static DataTable GetExpenseByID(int ID)
+        {
+            SqlCommand cm;
+            cm = DAL.CreateCommand();
+
+            cm.CommandText = "GetExpenseByID";
+            cm.Parameters.AddWithValue("@ID", ID);
+            SqlConnection.ClearAllPools();
+            return DAL.ExecuteSelectCommand(cm);
+        }  
+              
+              public static DataTable GetSalaryByID(int ID)
+        {
+            SqlCommand cm;
+            cm = DAL.CreateCommand();
+
+            cm.CommandText = "GetSalaryByID";
+            cm.Parameters.AddWithValue("@ID", ID);
+            SqlConnection.ClearAllPools();
+            return DAL.ExecuteSelectCommand(cm);
+        }  
+              
+        
+        public static DataTable GetEmpByID(int ID)
+        {
+            SqlCommand cm;
+            cm = DAL.CreateCommand();
+
+            cm.CommandText = "GetEmpByID";
+            cm.Parameters.AddWithValue("@ID", ID);
+            SqlConnection.ClearAllPools();
+            return DAL.ExecuteSelectCommand(cm);
+        }  
+            
+        public static DataTable GetUserByID(int ID)
         {
             SqlCommand cm;
             cm = DAL.CreateCommand();
@@ -86,7 +161,11 @@ namespace WarehouseAndSales
             cm.Parameters.AddWithValue("@ID", ID);
             SqlConnection.ClearAllPools();
             return DAL.ExecuteSelectCommand(cm);
-        }    public static DataTable GetBuyingByID(int ID)
+        }  
+        
+        
+        
+        public static DataTable GetBuyingByID(int ID)
         {
             SqlCommand cm;
             cm = DAL.CreateCommand();
@@ -287,6 +366,17 @@ namespace WarehouseAndSales
         }
 
 
+        public static DataTable GetAllSalarys()
+        {
+            SqlCommand cm;
+            cm = DAL.CreateCommand();
+
+            cm.CommandText = "GetAllSalarys";
+
+
+            SqlConnection.ClearAllPools();
+            return DAL.ExecuteSelectCommand(cm);
+        }
         public static DataTable GetAllSales()
         {
             SqlCommand cm;
@@ -340,7 +430,7 @@ namespace WarehouseAndSales
 
         public static bool UpdateMat(string MatName, string MatType, int MatUnitWeight, int MatUnitSize, string StorageType,
            
-           string Notes, int ID)
+           string Notes, int ID, int RetailPrice, int WholesalePrice)
         {
 
 
@@ -357,7 +447,8 @@ namespace WarehouseAndSales
             cm.Parameters.AddWithValue("@StorageType", StorageType);
             cm.Parameters.AddWithValue("@Notes", Notes);
             cm.Parameters.AddWithValue("@ID", ID);
-
+            cm.Parameters.AddWithValue("@RetailPrice", RetailPrice);
+            cm.Parameters.AddWithValue("@WholesalePrice", WholesalePrice);
 
 
 
@@ -484,7 +575,7 @@ namespace WarehouseAndSales
         }
                public static bool InsertMat(string MatName, string MatType, int MatUnitWeight, int MatUnitSize, string StorageType,
 
-           string Notes)
+           string Notes,int RetailPrice, int WholesalePrice)
         {
 
 
@@ -500,6 +591,8 @@ namespace WarehouseAndSales
             cm.Parameters.AddWithValue("@MatUnitSize", MatUnitSize);
             cm.Parameters.AddWithValue("@StorageType", StorageType);
             cm.Parameters.AddWithValue("@Notes", Notes);
+            cm.Parameters.AddWithValue("@RetailPrice", RetailPrice);
+            cm.Parameters.AddWithValue("@WholesalePrice", WholesalePrice);
 
 
 
@@ -704,6 +797,61 @@ string Notes)
 
 
 
+        public static bool DeleteExpense(int ID)
+        {
+
+
+
+            SqlCommand cm;
+            cm = DAL.CreateCommand();
+            if (cm == null) { return false; }
+            cm.CommandText = "DeleteExpense";
+
+            cm.Parameters.AddWithValue("@ID", ID);
+            SqlConnection.ClearAllPools();
+            return DAL.ExecuteCommand(cm);
+
+
+
+        }  
+        
+
+        public static bool DeleteSalary(int ID)
+        {
+
+
+
+            SqlCommand cm;
+            cm = DAL.CreateCommand();
+            if (cm == null) { return false; }
+            cm.CommandText = "DeleteSalary";
+
+            cm.Parameters.AddWithValue("@ID", ID);
+            SqlConnection.ClearAllPools();
+            return DAL.ExecuteCommand(cm);
+
+
+
+        }  
+        
+        public static bool DeleteEmp(int ID)
+        {
+
+
+
+            SqlCommand cm;
+            cm = DAL.CreateCommand();
+            if (cm == null) { return false; }
+            cm.CommandText = "DeleteEmp";
+
+            cm.Parameters.AddWithValue("@ID", ID);
+            SqlConnection.ClearAllPools();
+            return DAL.ExecuteCommand(cm);
+
+
+
+        }  
+        
         public static bool DeleteUser(int ID)
         {
 
@@ -720,7 +868,12 @@ string Notes)
 
 
 
-        }     public static bool DeleteAllRolesFromUser(int UserID)
+        }  
+        
+        
+        
+        
+        public static bool DeleteAllRolesFromUser(int UserID)
         {
 
 
@@ -860,6 +1013,144 @@ string Notes)
 
 
         }
+
+
+
+        public static bool InsertExpense( string Reason, string ExpDate, int Amount, string Note )
+        {
+
+
+
+            SqlCommand cm;
+            cm = DAL.CreateCommand();
+            if (cm == null) { return false; }
+            cm.CommandText = "InsertExpense";
+
+            cm.Parameters.AddWithValue("@Reason", Reason);
+            cm.Parameters.AddWithValue("@ExpDate", ExpDate);
+            cm.Parameters.AddWithValue("@Amount", Amount);
+            cm.Parameters.AddWithValue("@Note", Note);
+            SqlConnection.ClearAllPools();
+            return DAL.ExecuteCommand(cm);
+
+
+
+        }   public static bool UpdateExpense( string Reason, string ExpDate, int Amount, string Note, int ID )
+        {
+
+
+
+            SqlCommand cm;
+            cm = DAL.CreateCommand();
+            if (cm == null) { return false; }
+            cm.CommandText = "UpdateExpense";
+
+            cm.Parameters.AddWithValue("@Reason", Reason);
+            cm.Parameters.AddWithValue("@ExpDate", ExpDate);
+            cm.Parameters.AddWithValue("@Amount", Amount);
+            cm.Parameters.AddWithValue("@Note", Note);
+            cm.Parameters.AddWithValue("@ID", ID);
+            SqlConnection.ClearAllPools();
+            return DAL.ExecuteCommand(cm);
+
+
+
+        }
+
+        
+        public static bool UpdateSalary(int EmpID, string SalaryRecDate, string Notes, int RecAmount,int ID )
+        {
+
+
+
+            SqlCommand cm;
+            cm = DAL.CreateCommand();
+            if (cm == null) { return false; }
+            cm.CommandText = "UpdateSalary";
+
+            cm.Parameters.AddWithValue("@EmpID", EmpID);
+            cm.Parameters.AddWithValue("@SalaryRecDate", SalaryRecDate);
+            cm.Parameters.AddWithValue("@Notes", Notes);
+            cm.Parameters.AddWithValue("@RecAmount", RecAmount);
+            cm.Parameters.AddWithValue("@ID", ID);
+            SqlConnection.ClearAllPools();
+            return DAL.ExecuteCommand(cm);
+
+
+
+        }
+
+        
+
+
+        public static bool InsertIntoSalary(int EmpID, string SalaryRecDate, string Notes, int RecAmount)
+        {
+
+
+
+            SqlCommand cm;
+            cm = DAL.CreateCommand();
+            if (cm == null) { return false; }
+            cm.CommandText = "InsertIntoSalary";
+
+            cm.Parameters.AddWithValue("@EmpID", EmpID);
+            cm.Parameters.AddWithValue("@SalaryRecDate", SalaryRecDate);
+            cm.Parameters.AddWithValue("@Notes", Notes);
+            cm.Parameters.AddWithValue("@RecAmount", RecAmount);
+            SqlConnection.ClearAllPools();
+            return DAL.ExecuteCommand(cm);
+
+
+
+        }
+
+
+        public static bool UpdateEmps(string EmpName, string EmpJob, string EmpDep, string EmpPhoneNumber, int EmpSalary ,int ID )
+        {
+
+
+
+            SqlCommand cm;
+            cm = DAL.CreateCommand();
+            if (cm == null) { return false; }
+            cm.CommandText = "UpdateEmps";
+
+            cm.Parameters.AddWithValue("@EmpName", EmpName);
+            cm.Parameters.AddWithValue("@EmpJob", EmpJob);
+            cm.Parameters.AddWithValue("@EmpDep", EmpDep);
+            cm.Parameters.AddWithValue("@EmpPhoneNumber", EmpPhoneNumber);
+            cm.Parameters.AddWithValue("@EmpSalary", EmpSalary);
+            cm.Parameters.AddWithValue("@ID", ID);
+            SqlConnection.ClearAllPools();
+            return DAL.ExecuteCommand(cm);
+
+
+
+        }
+
+                public static bool InsertIntoEmps(string EmpName, string EmpJob, string EmpDep, string EmpPhoneNumber, int EmpSalary )
+        {
+
+
+
+            SqlCommand cm;
+            cm = DAL.CreateCommand();
+            if (cm == null) { return false; }
+            cm.CommandText = "InsertIntoEmps";
+
+            cm.Parameters.AddWithValue("@EmpName", EmpName);
+            cm.Parameters.AddWithValue("@EmpJob", EmpJob);
+            cm.Parameters.AddWithValue("@EmpDep", EmpDep);
+            cm.Parameters.AddWithValue("@EmpPhoneNumber", EmpPhoneNumber);
+            cm.Parameters.AddWithValue("@EmpSalary", EmpSalary);
+            SqlConnection.ClearAllPools();
+            return DAL.ExecuteCommand(cm);
+
+
+
+        }
+
+
         public static bool InsertIntoSales(string WarehouseName, string Notes)
         {
 

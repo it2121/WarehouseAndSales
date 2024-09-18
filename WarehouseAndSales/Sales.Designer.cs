@@ -246,6 +246,7 @@
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.Lime;
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
             this.الدفعات.DefaultCellStyle = dataGridViewCellStyle3;
+            this.الدفعات.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.الدفعات.HeaderText = "الدفعات";
             this.الدفعات.MinimumWidth = 100;
             this.الدفعات.Name = "الدفعات";

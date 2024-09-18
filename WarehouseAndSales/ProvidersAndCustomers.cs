@@ -27,6 +27,7 @@ namespace WarehouseAndSales
             }
 
             ProvidersAndCustomersDG.DataSource = dt;
+            ProvidersAndCustomersDG.Columns["ID"].Visible = false;
 
         }
 

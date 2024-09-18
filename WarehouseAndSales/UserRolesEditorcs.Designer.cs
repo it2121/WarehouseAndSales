@@ -39,6 +39,10 @@ namespace WarehouseAndSales
             this.CompanyInfo = new System.Windows.Forms.CheckBox();
             this.EmpsAndSalarys = new System.Windows.Forms.CheckBox();
             this.UsersManagment = new System.Windows.Forms.CheckBox();
+            this.SalaryManagment = new System.Windows.Forms.CheckBox();
+            this.EmpManagment = new System.Windows.Forms.CheckBox();
+            this.Expense = new System.Windows.Forms.CheckBox();
+            this.InvoicePrint = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // button2
@@ -46,7 +50,7 @@ namespace WarehouseAndSales
             this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(157, 324);
+            this.button2.Location = new System.Drawing.Point(163, 402);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(265, 40);
             this.button2.TabIndex = 50;
@@ -154,7 +158,7 @@ namespace WarehouseAndSales
             // 
             this.UsersManagment.AutoSize = true;
             this.UsersManagment.Font = new System.Drawing.Font("Microsoft YaHei UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.UsersManagment.Location = new System.Drawing.Point(221, 255);
+            this.UsersManagment.Location = new System.Drawing.Point(221, 331);
             this.UsersManagment.Name = "UsersManagment";
             this.UsersManagment.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.UsersManagment.Size = new System.Drawing.Size(148, 30);
@@ -162,11 +166,64 @@ namespace WarehouseAndSales
             this.UsersManagment.Text = "ادارة المستخدمين";
             this.UsersManagment.UseVisualStyleBackColor = true;
             // 
+            // SalaryManagment
+            // 
+            this.SalaryManagment.AutoSize = true;
+            this.SalaryManagment.Font = new System.Drawing.Font("Microsoft YaHei UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SalaryManagment.Location = new System.Drawing.Point(84, 237);
+            this.SalaryManagment.Name = "SalaryManagment";
+            this.SalaryManagment.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.SalaryManagment.Size = new System.Drawing.Size(176, 29);
+            this.SalaryManagment.TabIndex = 61;
+            this.SalaryManagment.Text = "ادارة صرفيات الموظفين";
+            this.SalaryManagment.UseVisualStyleBackColor = true;
+            // 
+            // EmpManagment
+            // 
+            this.EmpManagment.AutoSize = true;
+            this.EmpManagment.Font = new System.Drawing.Font("Microsoft YaHei UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EmpManagment.Location = new System.Drawing.Point(357, 237);
+            this.EmpManagment.Name = "EmpManagment";
+            this.EmpManagment.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.EmpManagment.Size = new System.Drawing.Size(118, 29);
+            this.EmpManagment.TabIndex = 60;
+            this.EmpManagment.Text = "ادارة الموظفين";
+            this.EmpManagment.UseVisualStyleBackColor = true;
+            // 
+            // Expense
+            // 
+            this.Expense.AutoSize = true;
+            this.Expense.Font = new System.Drawing.Font("Microsoft YaHei UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Expense.Location = new System.Drawing.Point(383, 284);
+            this.Expense.Name = "Expense";
+            this.Expense.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.Expense.Size = new System.Drawing.Size(92, 29);
+            this.Expense.TabIndex = 62;
+            this.Expense.Text = "الصرفيات";
+            this.Expense.UseVisualStyleBackColor = true;
+            this.Expense.CheckedChanged += new System.EventHandler(this.Expense_CheckedChanged);
+            // 
+            // InvoicePrint
+            // 
+            this.InvoicePrint.AutoSize = true;
+            this.InvoicePrint.Font = new System.Drawing.Font("Microsoft YaHei UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.InvoicePrint.Location = new System.Drawing.Point(143, 284);
+            this.InvoicePrint.Name = "InvoicePrint";
+            this.InvoicePrint.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.InvoicePrint.Size = new System.Drawing.Size(117, 29);
+            this.InvoicePrint.TabIndex = 63;
+            this.InvoicePrint.Text = "طباعة الفواتير";
+            this.InvoicePrint.UseVisualStyleBackColor = true;
+            // 
             // UserRolesEditorcs
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(564, 432);
+            this.ClientSize = new System.Drawing.Size(564, 503);
+            this.Controls.Add(this.InvoicePrint);
+            this.Controls.Add(this.Expense);
+            this.Controls.Add(this.SalaryManagment);
+            this.Controls.Add(this.EmpManagment);
             this.Controls.Add(this.UsersManagment);
             this.Controls.Add(this.CompanyInfo);
             this.Controls.Add(this.EmpsAndSalarys);
@@ -199,5 +256,9 @@ namespace WarehouseAndSales
         private System.Windows.Forms.CheckBox CompanyInfo;
         private System.Windows.Forms.CheckBox EmpsAndSalarys;
         private System.Windows.Forms.CheckBox UsersManagment;
+        private System.Windows.Forms.CheckBox SalaryManagment;
+        private System.Windows.Forms.CheckBox EmpManagment;
+        private System.Windows.Forms.CheckBox Expense;
+        private System.Windows.Forms.CheckBox InvoicePrint;
     }
 }

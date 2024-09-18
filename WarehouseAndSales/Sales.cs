@@ -1,4 +1,6 @@
 ﻿using System;
+using ESC_POS_USB_NET.Printer;
+
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,11 +9,21 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Rectangle = iTextSharp.text.Rectangle;
+using Font = iTextSharp.text.Font;
+using System.IO;
+using ImageMagick;
+using iTextSharp.text.pdf;
+using iTextSharp.text;
 
 namespace WarehouseAndSales
 {
     public partial class Sales : Form
     {
+        string kitchenPName = "";
+
+        Printer Kprinter;
+
         public Sales()
         {
             InitializeComponent();
@@ -19,8 +31,33 @@ namespace WarehouseAndSales
             SalesDG.DataSource = dt;
 
 
-        }
+            
+            SalesDG.Columns["ID"].Visible = false;
 
+
+        }
+        public void ReadPrintersStatsAndNames()
+        {
+
+
+
+          
+            using (StreamReader readtext = new StreamReader("p2.txt"))
+            {
+                kitchenPName = readtext.ReadLine();
+
+            }
+
+
+
+
+
+
+
+
+
+
+        }
         private void button1_Click(object sender, EventArgs e)
         {
             SalesEditor.MatID = 0;
@@ -64,6 +101,7 @@ namespace WarehouseAndSales
 
 
                 }
+              
 
 
             }

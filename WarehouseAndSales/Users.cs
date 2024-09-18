@@ -17,6 +17,7 @@ namespace WarehouseAndSales
             InitializeComponent();
 
             usersDG.DataSource = BAL.GetAllUsers();
+            usersDG.Columns["ID"].Visible = false;
 
         }
         protected override void OnFormClosing(FormClosingEventArgs e)

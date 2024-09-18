@@ -20,7 +20,7 @@ namespace WarehouseAndSales
             InitializeComponent();
             if (ID != 0)
             {
-                DataTable dt = BAL.GetPaymentsOfRecID(ID);
+                DataTable dt = BAL.GetOnePaymentByID(ID);
                 foreach (DataRow dr in dt.Rows)
                 {
 

@@ -23,7 +23,7 @@ namespace WarehouseAndSales
             DataTable dt = BAL.GetAllMats();
             matsDG.DataSource= dt;
 
-
+            matsDG.Columns["ID"].Visible = false;
         }
 
         private void warehousesDG_CellContentClick(object sender, DataGridViewCellEventArgs e)

@@ -43,6 +43,10 @@ namespace WarehouseAndSales
             this.Notes = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.DelBtn = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
+            this.WholesalePrice = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.RetailPrice = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // MatName
@@ -149,7 +153,7 @@ namespace WarehouseAndSales
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(692, 261);
+            this.label14.Location = new System.Drawing.Point(692, 328);
             this.label14.Name = "label14";
             this.label14.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.label14.Size = new System.Drawing.Size(75, 24);
@@ -159,7 +163,7 @@ namespace WarehouseAndSales
             // Notes
             // 
             this.Notes.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Notes.Location = new System.Drawing.Point(38, 259);
+            this.Notes.Location = new System.Drawing.Point(38, 326);
             this.Notes.Name = "Notes";
             this.Notes.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.Notes.Size = new System.Drawing.Size(648, 29);
@@ -170,7 +174,7 @@ namespace WarehouseAndSales
             this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(221, 330);
+            this.button1.Location = new System.Drawing.Point(216, 388);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(367, 41);
             this.button1.TabIndex = 28;
@@ -183,7 +187,7 @@ namespace WarehouseAndSales
             this.DelBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.DelBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DelBtn.ForeColor = System.Drawing.Color.White;
-            this.DelBtn.Location = new System.Drawing.Point(221, 388);
+            this.DelBtn.Location = new System.Drawing.Point(216, 446);
             this.DelBtn.Name = "DelBtn";
             this.DelBtn.Size = new System.Drawing.Size(367, 41);
             this.DelBtn.TabIndex = 29;
@@ -191,12 +195,56 @@ namespace WarehouseAndSales
             this.DelBtn.UseVisualStyleBackColor = false;
             this.DelBtn.Click += new System.EventHandler(this.DelBtn_Click);
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(297, 251);
+            this.label5.Name = "label5";
+            this.label5.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.label5.Size = new System.Drawing.Size(114, 24);
+            this.label5.TabIndex = 33;
+            this.label5.Text = "سعر البيع بالجملة";
+            // 
+            // WholesalePrice
+            // 
+            this.WholesalePrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.WholesalePrice.Location = new System.Drawing.Point(38, 249);
+            this.WholesalePrice.Name = "WholesalePrice";
+            this.WholesalePrice.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.WholesalePrice.Size = new System.Drawing.Size(253, 29);
+            this.WholesalePrice.TabIndex = 32;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(692, 252);
+            this.label7.Name = "label7";
+            this.label7.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.label7.Size = new System.Drawing.Size(113, 24);
+            this.label7.TabIndex = 31;
+            this.label7.Text = "سعر البيع بالمفرد";
+            // 
+            // RetailPrice
+            // 
+            this.RetailPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RetailPrice.Location = new System.Drawing.Point(433, 250);
+            this.RetailPrice.Name = "RetailPrice";
+            this.RetailPrice.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.RetailPrice.Size = new System.Drawing.Size(253, 29);
+            this.RetailPrice.TabIndex = 30;
+            // 
             // MatsEditor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(233)))), ((int)(((byte)(240)))));
-            this.ClientSize = new System.Drawing.Size(806, 471);
+            this.ClientSize = new System.Drawing.Size(806, 523);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.WholesalePrice);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.RetailPrice);
             this.Controls.Add(this.DelBtn);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label14);
@@ -237,5 +285,9 @@ namespace WarehouseAndSales
         private System.Windows.Forms.TextBox Notes;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button DelBtn;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox WholesalePrice;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox RetailPrice;
     }
 }

@@ -46,12 +46,13 @@ namespace WarehouseAndSales
 
                 foreach (DataRow dr in dt.Rows)
                 {
+                    CustomerID = Convert.ToInt32(dr["BuyerID"].ToString());
 
                     MatID = Convert.ToInt32(dr["MatID"].ToString());
                     Quant.Text = dr["Quant"].ToString();
                     SaleDate.Text = dr["SaleDate"].ToString();
                     TotalPrice.Text = dr["TotalPrice"].ToString();
-                    BuyingParty.Text = dr["BuyingParty"].ToString();
+                   // BuyingParty.Text = dr["BuyingParty"].ToString();
                     Notes.Text = dr["Notes"].ToString();
                     Wholesale.Checked = false;
                     Retail.Checked = false;
@@ -64,8 +65,8 @@ namespace WarehouseAndSales
                         Wholesale.Checked = true;
 
                     }
-
-
+                    setMatName();
+                    setProviderName();
                 }
 
                 if (MatID != 0)
@@ -97,7 +98,18 @@ namespace WarehouseAndSales
                             AutoWithdraw.Checked = true;
 
         }
+        public void setProviderName()
+        {
 
+            BuyingParty.Text = BAL.GetProviderOrCustomerByID(CustomerID).Rows[0]["FullName"].ToString();
+
+        }
+        public void setMatName()
+        {
+
+            MatName.Text = BAL.GetMatByID(MatID).Rows[0]["MatName"].ToString();
+
+        }
         private void quantlbl_Click(object sender, EventArgs e)
         {
 
@@ -126,7 +138,7 @@ namespace WarehouseAndSales
             DataTable MatDT = BAL.GetMatByID(MatID);
             MatName.Text = MatDT.Rows[0]["MatName"].ToString();
             RetailPrice = Convert.ToInt32(MatDT.Rows[0]["RetailPrice"].ToString());
-            WholeSalePrice = Convert.ToInt32(MatDT.Rows[0]["WholesalePrice"].ToString());
+           WholeSalePrice = Convert.ToInt32(MatDT.Rows[0]["WholesalePrice"].ToString());
             DataTable InStock = BAL.GetAllInStockOfAMat(MatID);
             foreach (DataRow Row in InStock.Rows)
             {
