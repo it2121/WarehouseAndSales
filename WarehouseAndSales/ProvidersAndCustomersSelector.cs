@@ -16,6 +16,8 @@ namespace WarehouseAndSales
         public static string From = "";
         public static SalesEditor sailsForm;
         public static BuyingEditor buyingForm;
+        public Reports ReportsForm;
+
         public ProvidersAndCustomersSelector()
         {
             InitializeComponent();
@@ -25,6 +27,17 @@ namespace WarehouseAndSales
                 ProviderOrCustomerDG.DataSource = BAL.GetAllCustomers();
             } else if (ProviderOrCustomer.Equals("provider")) {
                 ProviderOrCustomerDG.DataSource = BAL.GetAllProviders();
+
+
+            }
+             if (From.Equals("Reports")) {
+                DataTable provtbl = BAL.GetAllProviders();
+                DataTable CusTbl = BAL.GetAllCustomers();
+                foreach (DataRow dr in CusTbl.Rows) {
+
+                    provtbl.ImportRow(dr);
+                }
+                ProviderOrCustomerDG.DataSource = provtbl;
 
 
             }
@@ -52,13 +65,19 @@ namespace WarehouseAndSales
                 buyingForm.Show();
                 this.Hide();
 
-                /*  MatToWarehouseAction.WarehouseID = WarehouseID;
-                  MatToWarehouseAction.fromWarehouseID = fromWarehouseID;
-                  MatToWarehouseAction.MatID = MatID;
-                  MatToWarehouseAction.Action = Action;
-                  MatToWarehouseAction matToWarehouseAction = new MatToWarehouseAction();
-                  matToWarehouseAction.Show();
-                  this.Hide();*/
+      
+            }  else if (From.Equals("Reports"))
+            {
+
+                
+                ReportsForm.ProviderOrCustomerID = id;
+
+                ReportsForm.CheckAndSetNames();
+                ReportsForm.Show();
+
+
+
+                this.Hide();
             }
         
         }

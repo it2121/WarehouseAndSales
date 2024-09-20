@@ -24,7 +24,10 @@ namespace WarehouseAndSales
 
                 Retail.Checked = true;
                 DelBtn.Visible = false;
+                DateTime dateTime = DateTime.UtcNow.Date;
 
+
+                BuyingDate.Text = dateTime.ToString("dd/MM/yyyy");
 
             }
             else

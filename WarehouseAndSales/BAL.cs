@@ -26,7 +26,16 @@ namespace WarehouseAndSales
             cm.CommandText = "GetLogo";
             SqlConnection.ClearAllPools();
             return DAL.ExecuteSelectCommand(cm);
-        }   public static DataTable GetLatBuyingID()
+        }   public static DataTable GetAllMatsRegardlesOfConditions()
+        {
+            SqlCommand cm;
+            cm = DAL.CreateCommand();
+
+            cm.CommandText = "GetAllMatsRegardlesOfConditions";
+            SqlConnection.ClearAllPools();
+            return DAL.ExecuteSelectCommand(cm);
+        } 
+         public static DataTable GetLatBuyingID()
         {
             SqlCommand cm;
             cm = DAL.CreateCommand();
@@ -200,6 +209,58 @@ namespace WarehouseAndSales
 
             cm.CommandText = "GetAllMatToWarehouseRecordByID";
             cm.Parameters.AddWithValue("@ID", ID);
+            SqlConnection.ClearAllPools();
+            return DAL.ExecuteSelectCommand(cm);
+        }
+        public static DataTable GetFilterSalesPayments(int MatID , int WarehouseID , int ProviderOrCustomerID ,string TypeOfSale)
+        {
+            SqlCommand cm;
+            cm = DAL.CreateCommand();
+
+            cm.CommandText = "GetFilterSalesPayments";
+            cm.Parameters.AddWithValue("@MatID", MatID);
+            cm.Parameters.AddWithValue("@WarehouseID", WarehouseID);
+            cm.Parameters.AddWithValue("@ProviderOrCustomerID", ProviderOrCustomerID);
+            cm.Parameters.AddWithValue("@TypeOfSale", TypeOfSale);
+            SqlConnection.ClearAllPools();
+            return DAL.ExecuteSelectCommand(cm);
+        }     public static DataTable GetFilterBuyingPayments(int MatID , int WarehouseID , int ProviderOrCustomerID ,string TypeOfSale)
+        {
+            SqlCommand cm;
+            cm = DAL.CreateCommand();
+
+            cm.CommandText = "GetFilterBuyingPayments";
+            cm.Parameters.AddWithValue("@MatID", MatID);
+            cm.Parameters.AddWithValue("@WarehouseID", WarehouseID);
+            cm.Parameters.AddWithValue("@ProviderOrCustomerID", ProviderOrCustomerID);
+            cm.Parameters.AddWithValue("@TypeOfSale", TypeOfSale);
+            SqlConnection.ClearAllPools();
+            return DAL.ExecuteSelectCommand(cm);
+        } 
+             public static DataTable GetFilterBuying(int MatID , int WarehouseID , int ProviderOrCustomerID ,string TypeOfSale)
+        {
+            SqlCommand cm;
+            cm = DAL.CreateCommand();
+
+            cm.CommandText = "GetFilterBuying";
+            cm.Parameters.AddWithValue("@MatID", MatID);
+            cm.Parameters.AddWithValue("@WarehouseID", WarehouseID);
+            cm.Parameters.AddWithValue("@ProviderOrCustomerID", ProviderOrCustomerID);
+            cm.Parameters.AddWithValue("@TypeOfSale", TypeOfSale);
+            SqlConnection.ClearAllPools();
+            return DAL.ExecuteSelectCommand(cm);
+        } 
+        
+        public static DataTable GetFilterSales(int MatID , int WarehouseID , int ProviderOrCustomerID ,string TypeOfSale)
+        {
+            SqlCommand cm;
+            cm = DAL.CreateCommand();
+
+            cm.CommandText = "GetFilterSales";
+            cm.Parameters.AddWithValue("@MatID", MatID);
+            cm.Parameters.AddWithValue("@WarehouseID", WarehouseID);
+            cm.Parameters.AddWithValue("@ProviderOrCustomerID", ProviderOrCustomerID);
+            cm.Parameters.AddWithValue("@TypeOfSale", TypeOfSale);
             SqlConnection.ClearAllPools();
             return DAL.ExecuteSelectCommand(cm);
         }

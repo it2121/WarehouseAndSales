@@ -16,9 +16,11 @@ namespace WarehouseAndSales
         public static int toWarehouseID = 0;
         public static int fromWarehouseID = 0;
         public static int MatID = 0;
+
         public static string Action = "";
         public static SalesEditor SailsForm ;
         public static BuyingEditor BuyingForm;
+        public  Reports ReportsForm;
         public WarehouseSelector()
         {
             InitializeComponent();
@@ -31,6 +33,11 @@ namespace WarehouseAndSales
 
 
             } else if (From.Equals("AutoBuyingDepo")) {
+                DataTable dt = BAL.GetAllWarehouses();
+                warehousesDG.DataSource = dt;
+
+
+            } else if (From.Equals("Reports")) {
                 DataTable dt = BAL.GetAllWarehouses();
                 warehousesDG.DataSource = dt;
 
@@ -86,6 +93,22 @@ namespace WarehouseAndSales
 
 
                 this.Hide();
+
+
+
+
+
+            }  else  if (From.Equals("Reports"))
+            {
+                ReportsForm.WarehouseID = Convert.ToInt32(warehousesDG.Rows[e.RowIndex].Cells["ID"].Value.ToString());
+
+                ReportsForm.CheckAndSetNames();
+                ReportsForm.Show();
+               
+
+
+                this.Hide();
+
 
 
 

@@ -37,6 +37,7 @@
             this.CompanyName = new System.Windows.Forms.Label();
             this.SubName = new System.Windows.Forms.Label();
             this.BtnsPanel = new System.Windows.Forms.Panel();
+            this.PrinterNameSettingBtn = new System.Windows.Forms.Button();
             this.InvoicePrint = new System.Windows.Forms.Button();
             this.Warehouses = new System.Windows.Forms.Button();
             this.Mats = new System.Windows.Forms.Button();
@@ -49,7 +50,7 @@
             this.EmpManagment = new System.Windows.Forms.Button();
             this.SalaryManagment = new System.Windows.Forms.Button();
             this.Expense = new System.Windows.Forms.Button();
-            this.PrinterNameSettingBtn = new System.Windows.Forms.Button();
+            this.Reports = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
             this.BtnsPanel.SuspendLayout();
@@ -133,6 +134,7 @@
             // 
             // BtnsPanel
             // 
+            this.BtnsPanel.Controls.Add(this.Reports);
             this.BtnsPanel.Controls.Add(this.PrinterNameSettingBtn);
             this.BtnsPanel.Controls.Add(this.InvoicePrint);
             this.BtnsPanel.Controls.Add(this.Warehouses);
@@ -151,6 +153,23 @@
             this.BtnsPanel.Name = "BtnsPanel";
             this.BtnsPanel.Size = new System.Drawing.Size(910, 624);
             this.BtnsPanel.TabIndex = 6;
+            // 
+            // PrinterNameSettingBtn
+            // 
+            this.PrinterNameSettingBtn.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.PrinterNameSettingBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(77)))));
+            this.PrinterNameSettingBtn.FlatAppearance.BorderSize = 0;
+            this.PrinterNameSettingBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.PrinterNameSettingBtn.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PrinterNameSettingBtn.ForeColor = System.Drawing.Color.White;
+            this.PrinterNameSettingBtn.Location = new System.Drawing.Point(537, 426);
+            this.PrinterNameSettingBtn.Margin = new System.Windows.Forms.Padding(0, 0, 0, 5);
+            this.PrinterNameSettingBtn.Name = "PrinterNameSettingBtn";
+            this.PrinterNameSettingBtn.Size = new System.Drawing.Size(212, 50);
+            this.PrinterNameSettingBtn.TabIndex = 25;
+            this.PrinterNameSettingBtn.Text = "ضبط اسم الطابعة";
+            this.PrinterNameSettingBtn.UseVisualStyleBackColor = false;
+            this.PrinterNameSettingBtn.Click += new System.EventHandler(this.button1_Click_2);
             // 
             // InvoicePrint
             // 
@@ -356,22 +375,22 @@
             this.Expense.UseVisualStyleBackColor = false;
             this.Expense.Click += new System.EventHandler(this.Expense_Click_1);
             // 
-            // PrinterNameSettingBtn
+            // Reports
             // 
-            this.PrinterNameSettingBtn.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.PrinterNameSettingBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(77)))));
-            this.PrinterNameSettingBtn.FlatAppearance.BorderSize = 0;
-            this.PrinterNameSettingBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.PrinterNameSettingBtn.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PrinterNameSettingBtn.ForeColor = System.Drawing.Color.White;
-            this.PrinterNameSettingBtn.Location = new System.Drawing.Point(537, 481);
-            this.PrinterNameSettingBtn.Margin = new System.Windows.Forms.Padding(0, 0, 0, 5);
-            this.PrinterNameSettingBtn.Name = "PrinterNameSettingBtn";
-            this.PrinterNameSettingBtn.Size = new System.Drawing.Size(212, 50);
-            this.PrinterNameSettingBtn.TabIndex = 25;
-            this.PrinterNameSettingBtn.Text = "ضبط اسم الطابعة";
-            this.PrinterNameSettingBtn.UseVisualStyleBackColor = false;
-            this.PrinterNameSettingBtn.Click += new System.EventHandler(this.button1_Click_2);
+            this.Reports.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.Reports.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(77)))));
+            this.Reports.FlatAppearance.BorderSize = 0;
+            this.Reports.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Reports.Font = new System.Drawing.Font("Times New Roman", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Reports.ForeColor = System.Drawing.Color.White;
+            this.Reports.Location = new System.Drawing.Point(359, 560);
+            this.Reports.Margin = new System.Windows.Forms.Padding(0, 0, 0, 5);
+            this.Reports.Name = "Reports";
+            this.Reports.Size = new System.Drawing.Size(212, 50);
+            this.Reports.TabIndex = 26;
+            this.Reports.Text = "التقارير";
+            this.Reports.UseVisualStyleBackColor = false;
+            this.Reports.Click += new System.EventHandler(this.Reports_Click);
             // 
             // Home
             // 
@@ -415,5 +434,6 @@
         private System.Windows.Forms.Button SalaryManagment;
         private System.Windows.Forms.Button Expense;
         private System.Windows.Forms.Button PrinterNameSettingBtn;
+        private System.Windows.Forms.Button Reports;
     }
 }

@@ -267,5 +267,12 @@ namespace WarehouseAndSales
             p.Show();
             this.Hide();
         }
+
+        private void Reports_Click(object sender, EventArgs e)
+        {
+            Reports repor = new Reports();
+            repor.Show();
+            this.Hide();
+        }
     }
 }

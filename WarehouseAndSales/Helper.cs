@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Data;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -58,5 +59,52 @@ namespace WarehouseAndSales
             }
             return HasRole;
         }
+
+
+        public static DataTable GetTableAfterDateCheck(DataTable InTbl, string StartDate, string EndDate,string FeildName)
+        {
+
+            DataTable AfterDateDT = InTbl.Clone();
+            DataTable retunrDT = AfterDateDT.Clone();
+            retunrDT.Clone();
+            if (StartDate.Length > 0 && EndDate.Length > 0)
+            {
+                AfterDateDT.Clear();
+
+                foreach (DataRow dr in InTbl.Rows)
+                {
+
+                    DateTime Date = DateTime.ParseExact(dr[FeildName].ToString(), "dd/MM/yyyy", CultureInfo.InvariantCulture);
+                    DateTime Startdate = DateTime.ParseExact(StartDate, "dd/MM/yyyy", CultureInfo.InvariantCulture);
+                    DateTime Enddate = DateTime.ParseExact(EndDate, "dd/MM/yyyy", CultureInfo.InvariantCulture);
+
+
+                    int startResult = DateTime.Compare(Date, Startdate);
+                    int endResult = DateTime.Compare(Enddate, Date);
+
+                    if (startResult >= 0 && endResult >= 0)
+                    {
+                        AfterDateDT.ImportRow(dr);
+
+                    }
+
+
+                }
+
+
+                retunrDT = AfterDateDT;
+
+
+            }
+            else
+            {
+                retunrDT = InTbl;
+
+            }
+
+            return retunrDT;
+        }
+
+
     }
 }

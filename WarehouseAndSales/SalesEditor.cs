@@ -37,7 +37,10 @@ namespace WarehouseAndSales
 
 
                 }
+                DateTime dateTime = DateTime.UtcNow.Date;
 
+
+                SaleDate.Text = dateTime.ToString("dd/MM/yyyy");
 
             }
             else

@@ -19,6 +19,7 @@ namespace WarehouseAndSales
         public static string Action = "";
         public static bool selectMatFromWarehouse = false;
         public static BuyingEditor buyingForm;
+        public Reports ReportsForm;
         public MatSelector()
         {
             InitializeComponent();
@@ -47,6 +48,12 @@ namespace WarehouseAndSales
 
                 dt = BAL.GetAllMats();
                 dt = Helper.RemoveDuplicateRows(dt, "ID");
+
+            }
+             if (From.Equals("Reports"))
+            {
+
+                dt = BAL.GetAllMatsRegardlesOfConditions();
 
             }
 
@@ -101,6 +108,19 @@ namespace WarehouseAndSales
                 buyingForm.Show();
                 this.Hide();
 
+            }   else if (From.Equals("Reports"))
+            {
+
+                ReportsForm.MatID = MatID;
+
+                ReportsForm.CheckAndSetNames();
+                ReportsForm.Show();
+
+
+
+                this.Hide();
+
+             
             }
 
 
