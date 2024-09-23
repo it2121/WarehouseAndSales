@@ -40,7 +40,7 @@ namespace WarehouseAndSales
                 ProviderOrCustomerDG.DataSource = provtbl;
 
 
-            }
+            } 
 
         }
 
@@ -78,8 +78,36 @@ namespace WarehouseAndSales
 
 
                 this.Hide();
+            }else if (From.Equals("Home"))
+            {
+
+
+             //   ReportTables.SalaryesTable = BAL.GetAllSalarys();
+            //    ReportTables.ExpencesTable = BAL.GetAllExpense();
+
+
+
+             
+
+                if (ProviderOrCustomer.Equals("customer"))
+                {
+
+                    ReportTables.SalesTable = BAL.GetFilterSales(0, 0, id, "");
+                    ReportTables.SalesTablePayments = BAL.GetFilterSalesPayments(0, 0, id, "");
+                }
+                else if (ProviderOrCustomer.Equals("provider"))
+                {
+                    ReportTables.BuyingsTable = BAL.GetFilterBuying(0, 0, id, "");
+                    ReportTables.BuyingsTablePayments = BAL.GetFilterBuyingPayments(0, 0, id, "");
+
+                }
+                ReportTables.FromHome = true;
+                ReportTables r = new ReportTables();
+                r.Show();
+                this.Hide();
+
             }
-        
+
         }
 
         private void ProvidersAndCustomersSelector_Load(object sender, EventArgs e)

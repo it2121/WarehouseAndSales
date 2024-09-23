@@ -34,6 +34,10 @@ namespace WarehouseAndSales
                 EmpManagment.Checked = Helper.UserHasRole("EmpManagment", dt);
                 Expense.Checked = Helper.UserHasRole("Expense", dt);
                 InvoicePrint.Checked = Helper.UserHasRole("InvoicePrint", dt);
+                ProviderReport.Checked = Helper.UserHasRole("ProviderReport", dt);
+                CustomerReport.Checked = Helper.UserHasRole("CustomerReport", dt);
+                Reports.Checked = Helper.UserHasRole("Reports", dt);
+                Backup.Checked = Helper.UserHasRole("Backup", dt);
             }
 
 
@@ -87,6 +91,19 @@ namespace WarehouseAndSales
                 if (InvoicePrint.Checked)
                     BAL.InsertRoleToUser(UserID, "InvoicePrint");
 
+                  if (Reports.Checked)
+                    BAL.InsertRoleToUser(UserID, "Reports");
+
+                  if (CustomerReport.Checked)
+                    BAL.InsertRoleToUser(UserID, "CustomerReport");
+
+                  if (ProviderReport.Checked)
+                    BAL.InsertRoleToUser(UserID, "ProviderReport");
+
+
+                       if (Backup.Checked)
+                    BAL.InsertRoleToUser(UserID, "Backup");
+
 
 
 
@@ -111,6 +128,11 @@ namespace WarehouseAndSales
         }
 
         private void Expense_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void checkBox4_CheckedChanged(object sender, EventArgs e)
         {
 
         }

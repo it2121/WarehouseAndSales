@@ -35,6 +35,8 @@ namespace WarehouseAndSales
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.buyingDG = new System.Windows.Forms.DataGridView();
+            this.Select = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.الدفعات = new System.Windows.Forms.DataGridViewButtonColumn();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.button2 = new System.Windows.Forms.Button();
@@ -45,8 +47,6 @@ namespace WarehouseAndSales
             this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
             this.Return = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.Select = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.الدفعات = new System.Windows.Forms.DataGridViewButtonColumn();
             ((System.ComponentModel.ISupportInitialize)(this.buyingDG)).BeginInit();
             this.flowLayoutPanel1.SuspendLayout();
             this.flowLayoutPanel3.SuspendLayout();
@@ -99,6 +99,41 @@ namespace WarehouseAndSales
             this.buyingDG.Size = new System.Drawing.Size(782, 581);
             this.buyingDG.TabIndex = 6;
             this.buyingDG.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.matsDG_CellContentClick);
+            // 
+            // Select
+            // 
+            this.Select.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Roboto Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.WhiteSmoke;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Lime;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
+            this.Select.DefaultCellStyle = dataGridViewCellStyle2;
+            this.Select.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Select.HeaderText = "تعديل";
+            this.Select.MinimumWidth = 100;
+            this.Select.Name = "Select";
+            this.Select.Text = "تعديل";
+            this.Select.ToolTipText = "تعديل";
+            this.Select.UseColumnTextForButtonValue = true;
+            // 
+            // الدفعات
+            // 
+            this.الدفعات.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Roboto Black", 12F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.Lime;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
+            this.الدفعات.DefaultCellStyle = dataGridViewCellStyle3;
+            this.الدفعات.HeaderText = "الدفعات";
+            this.الدفعات.MinimumWidth = 100;
+            this.الدفعات.Name = "الدفعات";
+            this.الدفعات.Text = "الدفعات";
+            this.الدفعات.ToolTipText = "الدفعات";
+            this.الدفعات.UseColumnTextForButtonValue = true;
             // 
             // flowLayoutPanel1
             // 
@@ -228,41 +263,6 @@ namespace WarehouseAndSales
             this.panel1.TabIndex = 11;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
-            // Select
-            // 
-            this.Select.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Roboto Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.WhiteSmoke;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Lime;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
-            this.Select.DefaultCellStyle = dataGridViewCellStyle2;
-            this.Select.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Select.HeaderText = "تعديل";
-            this.Select.MinimumWidth = 100;
-            this.Select.Name = "Select";
-            this.Select.Text = "تعديل";
-            this.Select.ToolTipText = "تعديل";
-            this.Select.UseColumnTextForButtonValue = true;
-            // 
-            // الدفعات
-            // 
-            this.الدفعات.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Roboto Black", 12F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.Lime;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
-            this.الدفعات.DefaultCellStyle = dataGridViewCellStyle3;
-            this.الدفعات.HeaderText = "الدفعات";
-            this.الدفعات.MinimumWidth = 100;
-            this.الدفعات.Name = "الدفعات";
-            this.الدفعات.Text = "الدفعات";
-            this.الدفعات.ToolTipText = "الدفعات";
-            this.الدفعات.UseColumnTextForButtonValue = true;
-            // 
             // Buying
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -274,6 +274,7 @@ namespace WarehouseAndSales
             this.Name = "Buying";
             this.Text = "Buying";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.Buying_Load);
             ((System.ComponentModel.ISupportInitialize)(this.buyingDG)).EndInit();
             this.flowLayoutPanel1.ResumeLayout(false);
             this.flowLayoutPanel3.ResumeLayout(false);

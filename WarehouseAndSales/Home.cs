@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ClosedXML.Excel;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -16,6 +17,19 @@ namespace WarehouseAndSales
     // darker #009788
     // green #009788
     // gray #f0f0f0
+
+
+
+
+
+    // green #08e4eb
+    //header #242e3a
+    // light bg #f4f4f4
+    //dark bg #1b1d2a
+    //redsh #fd4d52
+    //orangesh #fdbd4d
+
+
     public partial class Home : Form
     {
         public Home()
@@ -33,6 +47,7 @@ namespace WarehouseAndSales
                 SubName.Text = dr["SubName"].ToString();
 
             }
+            UserFullNameLbl.Text = Global.getfullname();
 
             SetBtnsVisibility();
         }
@@ -54,6 +69,10 @@ namespace WarehouseAndSales
             Expense.Visible = Helper.UserHasRole("Expense");
             InvoicePrint.Visible = Helper.UserHasRole("InvoicePrint");
             PrinterNameSettingBtn.Visible = Helper.UserHasRole("InvoicePrint");
+            Reports.Visible = Helper.UserHasRole("Reports");
+            CustomerReport.Visible = Helper.UserHasRole("CustomerReport");
+            ProviderReport.Visible = Helper.UserHasRole("ProviderReport");
+            Backup.Visible = Helper.UserHasRole("Backup");
 
         }
         public Image returnLogo()
@@ -273,6 +292,186 @@ namespace WarehouseAndSales
             Reports repor = new Reports();
             repor.Show();
             this.Hide();
+        }
+
+        private void button1_Click_3(object sender, EventArgs e)
+        {
+            Form1 f1 = new Form1();
+            f1.Show();
+            this.Hide();
+        }
+
+        private void CustomerReport_Click(object sender, EventArgs e)
+        {
+            ProvidersAndCustomersSelector.From = "Home";
+            ProvidersAndCustomersSelector.ProviderOrCustomer = "customer";
+            ProvidersAndCustomersSelector pr = new ProvidersAndCustomersSelector();
+            pr.Show();
+            this.Hide();
+        }
+
+        private void ProviderReport_Click(object sender, EventArgs e)
+        {
+            ProvidersAndCustomersSelector.From = "Home";
+            ProvidersAndCustomersSelector.ProviderOrCustomer = "provider";
+            ProvidersAndCustomersSelector pr = new ProvidersAndCustomersSelector();
+            pr.Show();
+            this.Hide();
+        }
+
+
+        public void CreateExcelBackUpFile() {
+
+            SaveFileDialog sfd = new SaveFileDialog();
+            sfd.Filter = "Excel Files|*.xlsx;";
+            string sfdname = saveFileDialog1.FileName;
+            if (sfd.ShowDialog() == DialogResult.OK)
+            {
+                Path.GetFullPath(sfd.FileName);
+            }
+            //  MessageBox.Show(sfd.FileName );
+            ExportBtnc(sfd.FileName);
+
+           // ExportBtnc(sfd.FileName);
+        }
+        public static void ExportBtnc(string PathToSaveTo)
+        {
+
+            string pathandname = "تقرير.xlsx";
+            /*           public static DataTable BuyingsTable = null;
+                 public static DataTable BuyingsTablePayments = null;
+                 public static DataTable SalesTable = null;
+                 public static DataTable SalesTablePayments = null;
+                 public static DataTable SalaryesTable = null;
+                 public static DataTable ExpencesTable = null;*/
+
+            var wb = new XLWorkbook();
+            int sheetCounter = 0;
+
+            
+                DataTable BuyingsTable1 = BAL.GetAllBuying();
+                BuyingsTable1.TableName = "المشتريات";
+                wb.Worksheets.Add(BuyingsTable1);
+                sheetCounter++;
+
+            DataTable BuyingsTablePayments = BAL.GetPaymentsOfRecID(Convert.ToInt32(BuyingsTable1.Rows[0]["ID"].ToString())).Clone();
+            BuyingsTablePayments.Clear();
+            foreach (DataRow dr in BuyingsTable1.Rows)
+            {
+
+                foreach (DataRow innerDR  in BAL.GetPaymentsOfRecID(Convert.ToInt32( dr["ID"].ToString())).Rows)
+                {
+                    BuyingsTablePayments.ImportRow(innerDR);
+
+
+                }
+
+            }
+
+                DataTable BuyingsTablePayments1 = BuyingsTablePayments;
+                BuyingsTablePayments1.TableName = "دفعات المشتريات";
+                wb.Worksheets.Add(BuyingsTablePayments1);
+                sheetCounter++;
+
+                DataTable SalesTable1 = BAL.GetAllSales();
+                SalesTable1.TableName = "المبيعات";
+                wb.Worksheets.Add(SalesTable1);
+                sheetCounter++;
+
+            DataTable SalesTablePayments = BAL.GetPaymentsOfRecID(Convert.ToInt32(SalesTable1.Rows[0]["ID"].ToString())).Clone();
+            SalesTablePayments.Clear();
+            foreach (DataRow dr in SalesTable1.Rows)
+            {
+
+                foreach (DataRow innerDR in BAL.GetPaymentsOfRecID(Convert.ToInt32(dr["ID"].ToString())).Rows)
+                {
+                    SalesTablePayments.ImportRow(innerDR);
+
+
+                }
+
+            }
+
+
+            DataTable SalesTablePayments1 = SalesTablePayments;
+                SalesTablePayments1.TableName = "دفعات المبيعات";
+                wb.Worksheets.Add(SalesTablePayments1);
+                sheetCounter++;
+
+                DataTable SalaryesTable1 = BAL.GetAllSalarys();
+                SalaryesTable1.TableName = "صرفيات الرواتب";
+                wb.Worksheets.Add(SalaryesTable1);
+                sheetCounter++;
+
+                DataTable ExpencesTable1 = BAL.GetAllExpense();
+            ExpencesTable1.TableName = "الصرفيات العامة";
+                wb.Worksheets.Add(ExpencesTable1);
+                sheetCounter++;
+
+
+            DataTable CustomersTable1 = BAL.GetAllCustomers();
+            CustomersTable1.TableName = "العملاء";
+            wb.Worksheets.Add(CustomersTable1);
+            sheetCounter++;
+
+            DataTable ProvidersTable1 = BAL.GetAllProviders();
+            ProvidersTable1.TableName = "المزودين";
+            wb.Worksheets.Add(ProvidersTable1);
+            sheetCounter++;
+
+            wb.SaveAs(pathandname);
+
+
+
+
+
+            byte[] bytes = GetBinaryFile(pathandname);
+
+            DateTime dateTime = DateTime.UtcNow;
+
+
+
+
+            System.IO.FileInfo file = new System.IO.FileInfo(pathandname);
+
+            // MessageBox.Show(pathandname);
+            // MessageBox.Show(PathToSaveTo+"\\" + dateTime.ToString("dd/MM/yyyy hh:mm") + " - " + pathandname);
+            File.Copy(pathandname, PathToSaveTo);
+
+            /*
+                        HttpContext.Current.Response.AddHeader("Content-Disposition", "attachment; filename=" + file.Name);
+                        HttpContext.Current.Response.AddHeader("Content-Length", file.Length.ToString());
+                        HttpContext.Current.Response.ContentType = "text/plain";
+                        HttpContext.Current.Response.TransmitFile(file.FullName);
+                        HttpContext.Current.Response.End();*/
+
+
+
+
+            MessageBox.Show("تم تصدير الملف بنجاح.");
+
+
+
+        }
+        public static byte[] GetBinaryFile(string filename)
+        {
+            byte[] bytes;
+            using (FileStream file = new FileStream(filename, FileMode.Open, FileAccess.Read))
+            {
+                bytes = new byte[file.Length];
+                file.Read(bytes, 0, (int)file.Length);
+            }
+            return bytes;
+        }
+
+        private void Backup_Click(object sender, EventArgs e)
+        {
+            CreateExcelBackUpFile();
+        }
+
+        private void UserFullNameLbl_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -12,8 +12,8 @@ namespace WarehouseAndSales
     internal class DAL
     {
 
-       static string DatabaseConnectionString = @"Server=GAMMA;Database=WarehouseAndSales;Trusted_Connection = True;";
-   //    static string DatabaseConnectionString = @"Server=DELTA\SQLEXPRESS;Database=WarehouseAndSales;Trusted_Connection = True;";
+      // static string DatabaseConnectionString = @"Server=GAMMA;Database=WarehouseAndSales;Trusted_Connection = True;";
+      static string DatabaseConnectionString = @"Server=DELTA\SQLEXPRESS;Database=WarehouseAndSales;Trusted_Connection = True;";
 
 
 

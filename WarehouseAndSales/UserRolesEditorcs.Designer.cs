@@ -43,6 +43,10 @@ namespace WarehouseAndSales
             this.EmpManagment = new System.Windows.Forms.CheckBox();
             this.Expense = new System.Windows.Forms.CheckBox();
             this.InvoicePrint = new System.Windows.Forms.CheckBox();
+            this.CustomerReport = new System.Windows.Forms.CheckBox();
+            this.ProviderReport = new System.Windows.Forms.CheckBox();
+            this.Reports = new System.Windows.Forms.CheckBox();
+            this.Backup = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // button2
@@ -62,7 +66,7 @@ namespace WarehouseAndSales
             // 
             this.Mats.AutoSize = true;
             this.Mats.Font = new System.Drawing.Font("Microsoft YaHei UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Mats.Location = new System.Drawing.Point(378, 62);
+            this.Mats.Location = new System.Drawing.Point(378, 47);
             this.Mats.Name = "Mats";
             this.Mats.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.Mats.Size = new System.Drawing.Size(97, 29);
@@ -74,7 +78,7 @@ namespace WarehouseAndSales
             // 
             this.sellings.AutoSize = true;
             this.sellings.Font = new System.Drawing.Font("Microsoft YaHei UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.sellings.Location = new System.Drawing.Point(361, 104);
+            this.sellings.Location = new System.Drawing.Point(361, 85);
             this.sellings.Name = "sellings";
             this.sellings.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.sellings.Size = new System.Drawing.Size(114, 29);
@@ -86,7 +90,7 @@ namespace WarehouseAndSales
             // 
             this.ProvidersAndBuyers.AutoSize = true;
             this.ProvidersAndBuyers.Font = new System.Drawing.Font("Microsoft YaHei UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ProvidersAndBuyers.Location = new System.Drawing.Point(304, 188);
+            this.ProvidersAndBuyers.Location = new System.Drawing.Point(304, 161);
             this.ProvidersAndBuyers.Name = "ProvidersAndBuyers";
             this.ProvidersAndBuyers.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.ProvidersAndBuyers.Size = new System.Drawing.Size(171, 29);
@@ -98,7 +102,7 @@ namespace WarehouseAndSales
             // 
             this.Expences.AutoSize = true;
             this.Expences.Font = new System.Drawing.Font("Microsoft YaHei UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Expences.Location = new System.Drawing.Point(350, 146);
+            this.Expences.Location = new System.Drawing.Point(350, 123);
             this.Expences.Name = "Expences";
             this.Expences.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.Expences.Size = new System.Drawing.Size(125, 29);
@@ -110,7 +114,7 @@ namespace WarehouseAndSales
             // 
             this.Buyings.AutoSize = true;
             this.Buyings.Font = new System.Drawing.Font("Microsoft YaHei UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Buyings.Location = new System.Drawing.Point(134, 104);
+            this.Buyings.Location = new System.Drawing.Point(134, 85);
             this.Buyings.Name = "Buyings";
             this.Buyings.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.Buyings.Size = new System.Drawing.Size(126, 29);
@@ -122,7 +126,7 @@ namespace WarehouseAndSales
             // 
             this.Warehouses.AutoSize = true;
             this.Warehouses.Font = new System.Drawing.Font("Microsoft YaHei UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Warehouses.Location = new System.Drawing.Point(148, 62);
+            this.Warehouses.Location = new System.Drawing.Point(148, 47);
             this.Warehouses.Name = "Warehouses";
             this.Warehouses.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.Warehouses.Size = new System.Drawing.Size(112, 29);
@@ -134,7 +138,7 @@ namespace WarehouseAndSales
             // 
             this.CompanyInfo.AutoSize = true;
             this.CompanyInfo.Font = new System.Drawing.Font("Microsoft YaHei UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CompanyInfo.Location = new System.Drawing.Point(94, 188);
+            this.CompanyInfo.Location = new System.Drawing.Point(94, 161);
             this.CompanyInfo.Name = "CompanyInfo";
             this.CompanyInfo.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.CompanyInfo.Size = new System.Drawing.Size(166, 29);
@@ -146,7 +150,7 @@ namespace WarehouseAndSales
             // 
             this.EmpsAndSalarys.AutoSize = true;
             this.EmpsAndSalarys.Font = new System.Drawing.Font("Microsoft YaHei UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.EmpsAndSalarys.Location = new System.Drawing.Point(81, 146);
+            this.EmpsAndSalarys.Location = new System.Drawing.Point(81, 123);
             this.EmpsAndSalarys.Name = "EmpsAndSalarys";
             this.EmpsAndSalarys.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.EmpsAndSalarys.Size = new System.Drawing.Size(179, 29);
@@ -158,7 +162,7 @@ namespace WarehouseAndSales
             // 
             this.UsersManagment.AutoSize = true;
             this.UsersManagment.Font = new System.Drawing.Font("Microsoft YaHei UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.UsersManagment.Location = new System.Drawing.Point(221, 331);
+            this.UsersManagment.Location = new System.Drawing.Point(222, 355);
             this.UsersManagment.Name = "UsersManagment";
             this.UsersManagment.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.UsersManagment.Size = new System.Drawing.Size(148, 30);
@@ -170,7 +174,7 @@ namespace WarehouseAndSales
             // 
             this.SalaryManagment.AutoSize = true;
             this.SalaryManagment.Font = new System.Drawing.Font("Microsoft YaHei UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SalaryManagment.Location = new System.Drawing.Point(84, 237);
+            this.SalaryManagment.Location = new System.Drawing.Point(84, 199);
             this.SalaryManagment.Name = "SalaryManagment";
             this.SalaryManagment.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.SalaryManagment.Size = new System.Drawing.Size(176, 29);
@@ -182,7 +186,7 @@ namespace WarehouseAndSales
             // 
             this.EmpManagment.AutoSize = true;
             this.EmpManagment.Font = new System.Drawing.Font("Microsoft YaHei UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.EmpManagment.Location = new System.Drawing.Point(357, 237);
+            this.EmpManagment.Location = new System.Drawing.Point(357, 199);
             this.EmpManagment.Name = "EmpManagment";
             this.EmpManagment.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.EmpManagment.Size = new System.Drawing.Size(118, 29);
@@ -194,7 +198,7 @@ namespace WarehouseAndSales
             // 
             this.Expense.AutoSize = true;
             this.Expense.Font = new System.Drawing.Font("Microsoft YaHei UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Expense.Location = new System.Drawing.Point(383, 284);
+            this.Expense.Location = new System.Drawing.Point(383, 237);
             this.Expense.Name = "Expense";
             this.Expense.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.Expense.Size = new System.Drawing.Size(92, 29);
@@ -207,7 +211,7 @@ namespace WarehouseAndSales
             // 
             this.InvoicePrint.AutoSize = true;
             this.InvoicePrint.Font = new System.Drawing.Font("Microsoft YaHei UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.InvoicePrint.Location = new System.Drawing.Point(143, 284);
+            this.InvoicePrint.Location = new System.Drawing.Point(148, 237);
             this.InvoicePrint.Name = "InvoicePrint";
             this.InvoicePrint.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.InvoicePrint.Size = new System.Drawing.Size(117, 29);
@@ -215,11 +219,64 @@ namespace WarehouseAndSales
             this.InvoicePrint.Text = "طباعة الفواتير";
             this.InvoicePrint.UseVisualStyleBackColor = true;
             // 
+            // CustomerReport
+            // 
+            this.CustomerReport.AutoSize = true;
+            this.CustomerReport.Font = new System.Drawing.Font("Microsoft YaHei UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CustomerReport.Location = new System.Drawing.Point(311, 307);
+            this.CustomerReport.Name = "CustomerReport";
+            this.CustomerReport.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.CustomerReport.Size = new System.Drawing.Size(164, 29);
+            this.CustomerReport.TabIndex = 66;
+            this.CustomerReport.Text = "سحب كشوفات العملاء";
+            this.CustomerReport.UseVisualStyleBackColor = true;
+            // 
+            // ProviderReport
+            // 
+            this.ProviderReport.AutoSize = true;
+            this.ProviderReport.Font = new System.Drawing.Font("Microsoft YaHei UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ProviderReport.Location = new System.Drawing.Point(89, 272);
+            this.ProviderReport.Name = "ProviderReport";
+            this.ProviderReport.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.ProviderReport.Size = new System.Drawing.Size(176, 29);
+            this.ProviderReport.TabIndex = 65;
+            this.ProviderReport.Text = "سحب كشوفات المزودين";
+            this.ProviderReport.UseVisualStyleBackColor = true;
+            // 
+            // Reports
+            // 
+            this.Reports.AutoSize = true;
+            this.Reports.Font = new System.Drawing.Font("Microsoft YaHei UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Reports.Location = new System.Drawing.Point(361, 272);
+            this.Reports.Name = "Reports";
+            this.Reports.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.Reports.Size = new System.Drawing.Size(115, 29);
+            this.Reports.TabIndex = 64;
+            this.Reports.Text = "سحب التقارير";
+            this.Reports.UseVisualStyleBackColor = true;
+            this.Reports.CheckedChanged += new System.EventHandler(this.checkBox4_CheckedChanged);
+            // 
+            // Backup
+            // 
+            this.Backup.AutoSize = true;
+            this.Backup.Font = new System.Drawing.Font("Microsoft YaHei UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Backup.Location = new System.Drawing.Point(117, 307);
+            this.Backup.Name = "Backup";
+            this.Backup.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.Backup.Size = new System.Drawing.Size(148, 29);
+            this.Backup.TabIndex = 67;
+            this.Backup.Text = "انشاء نسخ احتياطية";
+            this.Backup.UseVisualStyleBackColor = true;
+            // 
             // UserRolesEditorcs
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(564, 503);
+            this.Controls.Add(this.Backup);
+            this.Controls.Add(this.CustomerReport);
+            this.Controls.Add(this.ProviderReport);
+            this.Controls.Add(this.Reports);
             this.Controls.Add(this.InvoicePrint);
             this.Controls.Add(this.Expense);
             this.Controls.Add(this.SalaryManagment);
@@ -260,5 +317,9 @@ namespace WarehouseAndSales
         private System.Windows.Forms.CheckBox EmpManagment;
         private System.Windows.Forms.CheckBox Expense;
         private System.Windows.Forms.CheckBox InvoicePrint;
+        private System.Windows.Forms.CheckBox CustomerReport;
+        private System.Windows.Forms.CheckBox ProviderReport;
+        private System.Windows.Forms.CheckBox Reports;
+        private System.Windows.Forms.CheckBox Backup;
     }
 }

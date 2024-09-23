@@ -120,5 +120,10 @@ namespace WarehouseAndSales
         {
 
         }
+
+        private void Buying_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

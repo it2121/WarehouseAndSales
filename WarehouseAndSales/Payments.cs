@@ -20,6 +20,8 @@ namespace WarehouseAndSales
 
             DataTable dt = BAL.GetPaymentsOfRecID(RecID);
             buyingDG.DataSource = dt;
+            buyingDG.Columns["ID"].Visible = false;
+            buyingDG.Columns["رقم_السجل"].Visible = false;
 
         }
 
@@ -68,6 +70,11 @@ namespace WarehouseAndSales
             Home home = new Home();
             home.Show();
             this.Hide();
+        }
+
+        private void Payments_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
